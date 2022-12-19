@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "225162935253",
+    "project_id": "movcomp-lmac",
+    "storage_bucket": "movcomp-lmac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225162935253:android:897972878d0fe01ca61b5c",
+        "android_client_info": {
+          "package_name": "com.example.movcomplmac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "225162935253-ugvm8hgnclfik12rbvm9jf2biqaileab.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACXVAg3C-0vGJdGgNJFtMTi_jMGUKKI-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "225162935253-ugvm8hgnclfik12rbvm9jf2biqaileab.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
