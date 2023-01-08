@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b3f3c630-288a-4201-96aa-abbb09873224" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../01-Android/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-Android/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-Android/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-Android/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-Android/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../01-Android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/../01-Android/app/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-Android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/java/com/example/movcomplmac/ACicloVida.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/java/com/example/movcomplmac/FirstFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/java/com/example/movcomplmac/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../01-Android/app/src/main/java/com/example/movcomplmac/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/java/com/example/movcomplmac/SecondFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/res/layout/activity_aciclo_vida.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-Android/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/res/layout/content_aciclo_vida.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/res/layout/fragment_first.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/res/layout/fragment_second.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/res/values-land/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/res/values-w1240dp/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/res/values-w600dp/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-Android/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-Android/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../01-Android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../01-Android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-Android/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../01-Android/gradlew.bat" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/lmac-moviles">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2K3jigIvNURieQoeyYnoS8Ybl6J" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "V:/GitHub/andrade-cando-leonardo-mijail/00-kotlin",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b3f3c630-288a-4201-96aa-abbb09873224" name="Changes" comment="" />
+      <created>1673210296937</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673210296937</updated>
+      <workItem from="1673210297291" duration="75000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "225162935253",
-    "project_id": "movcomp-lmac",
-    "storage_bucket": "movcomp-lmac.appspot.com"
+    "project_number": "149477981664",
+    "project_id": "movcomp-lmac-8f4ec",
+    "storage_bucket": "movcomp-lmac-8f4ec.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:225162935253:android:897972878d0fe01ca61b5c",
+        "mobilesdk_app_id": "1:149477981664:android:89cbf578262b5b2ff73f85",
         "android_client_info": {
           "package_name": "com.example.movcomplmac"
         }
       },
       "oauth_client": [
         {
-          "client_id": "225162935253-ugvm8hgnclfik12rbvm9jf2biqaileab.apps.googleusercontent.com",
+          "client_id": "149477981664-vngssjm2sf583531ci421ibpv7fsrtog.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyACXVAg3C-0vGJdGgNJFtMTi_jMGUKKI-k"
+          "current_key": "AIzaSyBT4_nOxuKRrKuj9X-flvPtzDHbtDNWueg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "225162935253-ugvm8hgnclfik12rbvm9jf2biqaileab.apps.googleusercontent.com",
+              "client_id": "149477981664-vngssjm2sf583531ci421ibpv7fsrtog.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
