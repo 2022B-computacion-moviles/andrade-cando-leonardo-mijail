@@ -5,4 +5,9 @@ class BEntrenador(
     var nombre:String,
     var email:String
     ) {
+    override fun toString(): String {
+        return "${nombre} - ${email}"
+    }
+
+
 }
