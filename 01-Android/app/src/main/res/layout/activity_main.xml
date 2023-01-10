@@ -34,9 +34,9 @@
         android:layout_height="wrap_content"
         android:text="Ciclo Vida"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/btn_intent"
         app:layout_constraintHorizontal_bias="0.583"
-        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/btn_intent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.468" />
 
@@ -55,15 +55,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="I. IMPLICITO"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="149dp" />
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="152dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_intent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Button"
+        android:text="I. EXPLICITO"
         app:layout_constraintEnd_toEndOf="@+id/btn_ir_intent_implicito"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_ir_intent_implicito"
