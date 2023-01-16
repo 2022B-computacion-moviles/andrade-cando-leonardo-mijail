@@ -108,7 +108,7 @@ abstract class ESqliteHelperEntrenador (
             val id = resultadoConsultaLectura.getInt(0) //columna indice 0 ->ID
             val nombre = resultadoConsultaLectura.getString(1)  //columna indice 1 -> NOMBRE
             val email =
-                resultadoConsultaLectura.getString(2)  //columna indice 2 -> DESCRIPCION
+                resultadoConsultaLectura.getString(2)  //columna indice 2 -> ENLACE
             if (id != null){
                 usuarioEncontrado.id = id
                 usuarioEncontrado.nombre = nombre
