@@ -43,7 +43,7 @@ class Planeta(
     fun getidPlaneta(): Int {
         return idPlaneta
     }
-    fun getNombrePlante(): String{
+    fun getNombrePlaneta(): String{
         return nombrePlaneta
     }
 

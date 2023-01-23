@@ -3,7 +3,6 @@ import java.io.IOException
 import java.nio.file.Files
 import java.nio.file.Paths
 import java.nio.file.StandardOpenOption
-import java.text.SimpleDateFormat
 import java.util.*
 
 class SistemaPlanetario(
@@ -12,7 +11,8 @@ class SistemaPlanetario(
     private var formacionAño: Float,
     private var galaxia: String,
     private var tipoSistemaPlanetario: String,
-    private var Planetas: ArrayList<Planeta>?
+
+    private var arrayplanetas: ArrayList<Planeta>
 ){
     init {
         idSistemaPlanetario
@@ -20,7 +20,7 @@ class SistemaPlanetario(
         formacionAño
         galaxia
         tipoSistemaPlanetario
-        Planetas
+        arrayplanetas
     }
 
     fun setidSistemaPlanetario(idSistemaPlanetario: Int){
@@ -98,7 +98,7 @@ class SistemaPlanetario(
                                 + "Galaxia: " + sistemaPlanetario[3] + "\n"
                                 + "Tipo: " + sistemaPlanetario[4] + "\n"
                     )
-                    println("Lista de Planetas3:")
+                    println("Lista de Planetas:")
                     var path = Paths.get("src/main/resources/planeta.txt")
                     Files.lines(path, Charsets.UTF_8).forEach {
                         var planetas = it.split(",")
@@ -143,7 +143,7 @@ class SistemaPlanetario(
                                 print("Seleccione una acción 1) Agregar un nuevo planeta 2) Eliminar un planeta: ")
                                 var opcion = readln().toInt()
                                 if (opcion == 1) {
-                                    println("***Planetas***")
+                                    println("Planetas")
                                     Planeta.extraerPlaneta()
                                     print("Seleccione los planetas que se deseen agregar (1,2,...): ")
                                     var listaActualizar = readln()
@@ -268,8 +268,8 @@ class SistemaPlanetario(
             var i = 0
             Files.lines(path, Charsets.UTF_8).forEach {
                 var stringSplit = it.split(",")
-                if (i < listaPlanetas.size) {
-                    if (stringSplit[0] == listaPlanetas[i].toString()) {
+                if (i < arrayPlanetas.size) {
+                    if (stringSplit[0] == arrayPlanetas[i].toString()) {
                         var splitFecha = stringSplit[3].split("-")
                         var planetaAux = Planeta(
                             stringSplit[0].toInt(),
@@ -300,24 +300,23 @@ class SistemaPlanetario(
     fun ingresarSistemaPlanetario(sizeArrayPlaneta: Int) {
 
         var path = Paths.get("src/main/resources/sistemaSolar.txt")
-
         var data =
             this.idSistemaPlanetario.toString() + "" +
-                    "," + this.nombreSistemaPlanetario + "," + this.formacionAño.toString() + "" +
-                    "," + this.galaxia + "," + this.tipoSistemaPlanetario +","
+                    "," + this.nombreSistemaPlanetario +
+                    "," + this.formacionAño.toString() +
+                    "," + this.galaxia +
+                    "," + this.tipoSistemaPlanetario +
+                    ","
         var i = 1
-        print("hola")
-        for (item in this.Planetas!!) {
-
-            if (i < sizeArrayPlaneta) {
+        for (item in this.arrayplanetas!!){
+            if(i< sizeArrayPlaneta){
                 data += item.getidPlaneta().toString() + ","
-                print(item.getidPlaneta().toString()+"estoy 312")
             } else {
                 data += item.getidPlaneta().toString()
-                print(item.getidPlaneta().toString()+"estoy 315")
             }
             i++
         }
+
         data += "\n"
 
         try {

@@ -79,7 +79,7 @@ fun main(args: Array<String>) {
 
                             print("Seleccione los planetas que forman parte del sistema planetario (1,2,...):\n")
                             //Planeta.extraerPlaneta()
-                            var stringPlaneta = readLine().toString()
+                            var stringPlaneta = readLine().toString() //lee por consola
                             var splitPlaneta = stringPlaneta.split(",")
                             var intPlanetasArray = splitPlaneta.map { it.toInt() }.toTypedArray()
                             var listaSistemaPlanetario: ArrayList<Planeta> = SistemaPlanetario.setListaPlanetas(intPlanetasArray)
