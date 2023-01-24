@@ -110,7 +110,7 @@ class SistemaPlanetario(
                         }
                     }
                     //Ver que atributo desea modificar
-                    var auxModificar = arrayOf<String>("0", "0", "0", "0", "0")
+                    var auxModificar = arrayOf<String>("", "", "", "", "")
                     do {
                         println("Elija el atributo a modificar: 1) Nombre, 2) Formacion, 3) Galaxia, 4) Tipo, 5) Planetas")
                         var atributoUpdate = readln().toInt()
@@ -148,27 +148,32 @@ class SistemaPlanetario(
                                     print("Seleccione los planetas que se deseen agregar (1,2,...): ")
                                     var listaActualizar = readln()
                                     auxModificar.set(4, ModificarListaPlanetas(listaActualizar, sistemaPlanetario[0].toInt()))
+
                                 } else {
-                                    print("Seleccione los planetas que se deseen eliminar (1,2,...): ")
+                                    print("Seleccione los planetas que se deseen eliminar: ")
                                     var listaBorrar = readln()
                                     var auxLista = BorrarListaPlanetas(listaBorrar, sistemaPlanetario[0].toInt())
                                     auxModificar.set(4, auxLista)
+
                                 }
                             }
                         }
 
-                        println("¿Desea seguir actualizando 1) SI - 2) NO?")
+                        println("¿Desea seguir actualizando 1. SI - 2. NO?")
                         var auxOpcion = readln().toInt()
                         if (auxOpcion == 2) {
-                            update = false //Terminar update de albúm
+                            update = false
                             for (i in 0..auxModificar.size - 1) {
-                                if (auxModificar[i] == "0") {
-                                    if (i == 4) { // Tomando lista de canciones original del albúm
+                                print(auxModificar[4]+"for\n")
+                                if (auxModificar[i] == "") {
+                                    if (i == 4) { //
                                         for (j in 5..sistemaPlanetario.size - 1) {
                                             if (j == sistemaPlanetario.size - 1) {
                                                 auxModificar[i] += sistemaPlanetario[j]
+
                                             } else {
                                                 auxModificar[i] += sistemaPlanetario[j] + ","
+
                                             }
                                         }
                                     } else {
@@ -177,6 +182,7 @@ class SistemaPlanetario(
                                 }
                             }
                             archivoUpdate += sistemaPlanetario[0] + "," + auxModificar[0] + "," + auxModificar[1] + "," + auxModificar[2] + "," + auxModificar[3] + "," + auxModificar[4] + "\n"
+                            print(auxModificar[4])
                         }
                     } while (update)
                     flag = true

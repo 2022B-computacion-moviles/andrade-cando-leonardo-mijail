@@ -1,1 +1,6 @@
 1,Sistema Solar,523487.0,Via Lactea,solar,1
+2,Lich,1258900,Via Lactea,extrasolar,2
+3,Upsilon Andromedae,1999,Via Lactea,extrasolar,3
+4,PSR,569874.0,Via Lactea,extrasolar,4
+5,Cha,436760,Via Lactea,extrasolar,5
+6,Ñ,7894,Via Lactea,extrasolar,1,6
