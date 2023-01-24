@@ -12,6 +12,7 @@ class ECrudEntrenador : AppCompatActivity() {
         setContentView(R.layout.activity_ecrud_entrenadores)
         val botonCrearBDD = findViewById<Button>(R.id.btn_crear_bdd)
         botonCrearBDD.setOnClickListener{
+
             val nombre = findViewById<EditText>(R.id.input_nombre)
             val email = findViewById<EditText>(R.id.input_email)
             EBasedeDatos.tablaEntrenador!!.crearEntrenador(
@@ -32,7 +33,7 @@ class ECrudEntrenador : AppCompatActivity() {
             nombre.setText(entrenador.nombre)
             email.setText(entrenador.email)
         }
-        val botonActualizarBDD = findViewById<Button>(R.id.btn_buscar_bdd)
+        val botonActualizarBDD = findViewById<Button>(R.id.btn_actualizar_bdd)
         botonActualizarBDD.setOnClickListener{
             val id = findViewById<EditText>(R.id.input_id)
             val nombre = findViewById<EditText>(R.id.input_nombre)

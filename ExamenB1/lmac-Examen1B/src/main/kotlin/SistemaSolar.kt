@@ -308,15 +308,14 @@ class SistemaPlanetario(
                     "," + this.tipoSistemaPlanetario +
                     ","
         var i = 1
-        for (item in this.arrayplanetas!!){
+        for (planeta in this.arrayplanetas!!){
             if(i< sizeArrayPlaneta){
-                data += item.getidPlaneta().toString() + ","
+                data += planeta.getidPlaneta().toString() + ","
             } else {
-                data += item.getidPlaneta().toString()
+                data += planeta.getidPlaneta().toString()
             }
             i++
         }
-
         data += "\n"
 
         try {
