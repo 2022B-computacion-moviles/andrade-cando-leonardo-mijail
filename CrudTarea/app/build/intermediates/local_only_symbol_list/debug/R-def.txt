@@ -1,0 +1,33 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id btn_ir_Planetas
+id btn_ir_SistemaPlanetario
+id btn_regis
+id id_Distancia
+id id_Nombre_Planeta
+id id_Registrar
+id id_date
+id id_tamanio_planeta
+id lv_list_view
+id mi_editar
+id mi_eliminar
+id textView
+layout activity_main
+layout activity_planetas
+layout activity_sistema_planetario
+menu menu_planetas
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Theme.CRUDTAREA
+xml backup_rules
+xml data_extraction_rules
