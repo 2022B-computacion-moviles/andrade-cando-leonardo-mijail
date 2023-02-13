@@ -2,7 +2,6 @@ package com.example.crud_sqlite
 
 import android.content.DialogInterface
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ContextMenu
 import android.view.MenuItem
@@ -10,18 +9,20 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class SistemaPlanetarioMainActivity : AppCompatActivity() {
 
-    var idItemSeleccionado = 0
+    var id_sistema_planetario = 0
+    var listaSistemaPlanetario = emptyList<SistemaPlanetario>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sistema_planetario_main)
 
-        var listaSistemaPlanetario = emptyList<SistemaPlanetario>()
+
         val lista = findViewById<ListView>(R.id.lista_sistema_planetario)
 
         val database = AppDatabase.getDatabase(this)
@@ -37,7 +38,7 @@ class SistemaPlanetarioMainActivity : AppCompatActivity() {
 
         lista.setOnItemClickListener { parent, view, position, id ->
             val intent = Intent(this, SistemaPlanetarioActivity::class.java)
-            intent.putExtra("sistemaPlanetario", listaSistemaPlanetario[position])
+            intent.putExtra("id", listaSistemaPlanetario[position].id_sistema_planetario)
             startActivity(intent)
         }
 
@@ -58,26 +59,34 @@ class SistemaPlanetarioMainActivity : AppCompatActivity() {
         super.onCreateContextMenu(menu, v, menuInfo)
         //llamamos las opciones del menu
         menuInflater.inflate(R.menu.menu_sistema_planetario, menu)
+
         //Obtener el id del ArraylistSeleccionado
         val info = menuInfo as AdapterView.AdapterContextMenuInfo
         val id = info.position
-        idItemSeleccionado = id
+        id_sistema_planetario = id
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
 
         return when (item.itemId){
             R.id.editar_sistema_planetario ->{
-                "${idItemSeleccionado}"
+                val intent = Intent(this,NuevoSistemaPlanetarioActivity::class.java )
+                intent.putExtra("sistema_planetario",listaSistemaPlanetario[id_sistema_planetario])
+                startActivity(intent)
                 return true
             }
             R.id.eliminar_sistema_planetario ->{
-                abrirDialogo()
-                "${idItemSeleccionado}"
+                val intent = Intent(this,SistemaPlanetarioActivity::class.java )
+                intent.putExtra("sistema_planetario",listaSistemaPlanetario[id_sistema_planetario])
+                startActivity(intent)
                 return true
             }
             R.id.ver_planetas ->{
-                "${idItemSeleccionado}"
+                val intent = Intent(this,PlanetaMainActivity::class.java )
+                intent.putExtra("id_sistema_planetario",id_sistema_planetario)
+
+
+                startActivity(intent)
                 return true
             }
             else -> super.onContextItemSelected(item)

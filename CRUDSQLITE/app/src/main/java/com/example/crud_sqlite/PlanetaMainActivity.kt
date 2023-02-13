@@ -9,21 +9,26 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class PlanetaMainActivity : AppCompatActivity() {
-    var idItemSeleccionado = 0
+    var id_planeta = 0
+    var listaPlaneta = emptyList<Planeta>()
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.planeta_activity_main)
 
-        var listaPlaneta = emptyList<Planeta>()
+
         val lista = findViewById<ListView>(R.id.lista_planeta)
 
+        val id_sistema_planetario = intent.getIntExtra("id_sistema_planetario",0) + 1
+
         val database = AppDatabase.getDatabase(this)
-        database.planeta().gatAll().observe(this, Observer {
+        database.planeta().getAll(id_sistema_planetario).observe(this, Observer {
             listaPlaneta = it
             val adapter = PlanetasAdapter(this,listaPlaneta)
             lista.adapter = adapter
@@ -33,7 +38,12 @@ class PlanetaMainActivity : AppCompatActivity() {
         registerForContextMenu(lista)
         lista.setOnItemClickListener { parent, view, position, id ->
             val intent = Intent(this, PlanetaActivity::class.java)
-            intent.putExtra("planeta", listaPlaneta[position])
+            intent.putExtra("id", listaPlaneta[position].id_planeta)
+            startActivity(intent)
+        }
+        val agregarBoton = findViewById<FloatingActionButton>(R.id.floatingActionButton2)
+        agregarBoton.setOnClickListener{
+            val intent = Intent(this,NuevoPlanetaActivity::class.java )
             startActivity(intent)
         }
 
@@ -49,19 +59,23 @@ class PlanetaMainActivity : AppCompatActivity() {
         //Obtener el id del ArraylistSeleccionado
         val info = menuInfo as AdapterView.AdapterContextMenuInfo
         val id = info.position
-        idItemSeleccionado = id
+        id_planeta = id
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
 
         return when (item.itemId){
             R.id.editar_planeta ->{
-                "${idItemSeleccionado}"
+                val intent = Intent(this,NuevoPlanetaActivity::class.java )
+                intent.putExtra("planeta",listaPlaneta[id_planeta])
+                startActivity(intent)
                 return true
             }
             R.id.eliminar_planeta ->{
-                abrirDialogo()
-                "${idItemSeleccionado}"
+                val intent = Intent(this,PlanetaActivity::class.java )
+                intent.putExtra("borrar",1)
+                startActivity(intent)
+
                 return true
             }
             else -> super.onContextItemSelected(item)

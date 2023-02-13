@@ -10,15 +10,17 @@ interface SistemaPlanetarioDao {
     fun gatAll(): LiveData<List<SistemaPlanetario>>
 
     @Query("SELECT * FROM SistemaPlanetario WHERE id_sistema_planetario = :id")
-    fun get(id: Int):LiveData<SistemaPlanetario>
+    fun get(id: Int): LiveData<SistemaPlanetario>
 
     @Insert
     fun insertAll(vararg sistemaplanetario: SistemaPlanetario)
 
     @Update
     fun update(sistemaplanetario: SistemaPlanetario)
-/*
-    @Transaction
-    @Query("SELECT * FROM SistemaPlanetario")
-    fun getUsersWithPlaylists(): List<Sistema_Planeta>*/
+
+    @Query("DELETE FROM SistemaPlanetario WHERE id_sistema_planetario = :id")
+    fun del(id: Int)
+
+    @Delete
+    fun delete(sistemaplanetario: SistemaPlanetario)
 }
