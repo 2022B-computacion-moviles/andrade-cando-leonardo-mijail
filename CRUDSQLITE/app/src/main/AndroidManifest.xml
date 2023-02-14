@@ -12,6 +12,9 @@
         android:theme="@style/Theme.CRUDSQLITE"
         tools:targetApi="31">
         <activity
+            android:name=".SistemaPlanetarioMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".NuevoPlanetaActivity"
             android:exported="false" />
         <activity
@@ -27,7 +30,7 @@
             android:name=".PlanetaMainActivity"
             android:exported="false" />
         <activity
-            android:name=".SistemaPlanetarioMainActivity"
+            android:name=".PresentacionActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

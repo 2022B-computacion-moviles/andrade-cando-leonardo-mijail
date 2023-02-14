@@ -83,7 +83,7 @@ class SistemaPlanetarioMainActivity : AppCompatActivity() {
             }
             R.id.ver_planetas ->{
                 val intent = Intent(this,PlanetaMainActivity::class.java )
-                intent.putExtra("id_sistema_planetario",id_sistema_planetario)
+                intent.putExtra("id_sistema_planetario",listaSistemaPlanetario[id_sistema_planetario].id_sistema_planetario)
 
 
                 startActivity(intent)
@@ -91,19 +91,5 @@ class SistemaPlanetarioMainActivity : AppCompatActivity() {
             }
             else -> super.onContextItemSelected(item)
         }
-    }
-
-    fun abrirDialogo(){
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle("Desea Eliminar")
-        builder.setPositiveButton(
-            "Aceptar",
-            DialogInterface.OnClickListener{ dialog,
-                                             which ->
-                //Al aceptar eliminar el registro
-            }
-        )
-        builder.setNegativeButton("Cancelar",null)
-
     }
 }

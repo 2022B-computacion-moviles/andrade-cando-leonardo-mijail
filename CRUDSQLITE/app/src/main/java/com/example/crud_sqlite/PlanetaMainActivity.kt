@@ -25,7 +25,7 @@ class PlanetaMainActivity : AppCompatActivity() {
 
         val lista = findViewById<ListView>(R.id.lista_planeta)
 
-        val id_sistema_planetario = intent.getIntExtra("id_sistema_planetario",0) + 1
+        val id_sistema_planetario = intent.getIntExtra("id_sistema_planetario",0)
 
         val database = AppDatabase.getDatabase(this)
         database.planeta().getAll(id_sistema_planetario).observe(this, Observer {
@@ -73,7 +73,7 @@ class PlanetaMainActivity : AppCompatActivity() {
             }
             R.id.eliminar_planeta ->{
                 val intent = Intent(this,PlanetaActivity::class.java )
-                intent.putExtra("borrar",1)
+                intent.putExtra("planeta",listaPlaneta[id_planeta])
                 startActivity(intent)
 
                 return true

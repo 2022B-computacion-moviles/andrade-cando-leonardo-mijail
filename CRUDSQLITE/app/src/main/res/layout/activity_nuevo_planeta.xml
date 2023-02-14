@@ -81,7 +81,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="73dp"
         android:ems="10"
-        android:hint="Id Sistema Operativo"
+        android:hint="Id Sistema Planetario"
         android:inputType="number"
         app:layout_constraintEnd_toStartOf="@+id/btn_guardar_planeta"
         app:layout_constraintStart_toStartOf="parent"
