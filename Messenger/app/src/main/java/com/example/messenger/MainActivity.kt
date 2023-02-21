@@ -1,5 +1,6 @@
 package com.example.messenger
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
@@ -13,11 +14,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         
         var listaUsuarios = arrayListOf<Usuario>()
-        listaUsuarios.add(Usuario(R.drawable.rick,"Ricardo","10:40 AM","Hola","_________________________________________________"))
+        listaUsuarios.add(Usuario(R.drawable.rick,"Ricardo","10:40 AM","Holiii","_________________________________________________"))
+        listaUsuarios.add(Usuario(R.drawable.alex,"Alexander","10:40 AM","Confirma","_________________________________________________"))
+        listaUsuarios.add(Usuario(R.drawable.rick,"Ricardo","10:40 AM","Holiii","_________________________________________________"))
+        listaUsuarios.add(Usuario(R.drawable.alex,"Alexander","10:40 AM","Confirma","_________________________________________________"))
+        listaUsuarios.add(Usuario(R.drawable.rick,"Ricardo","10:40 AM","Holiii","_________________________________________________"))
         listaUsuarios.add(Usuario(R.drawable.alex,"Alexander","10:40 AM","Confirma","_________________________________________________"))
                       
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         inicializarRecyclerView(listaUsuarios,recyclerView)
+
+
                
     }
 
@@ -27,6 +34,10 @@ class MainActivity : AppCompatActivity() {
         recyclerView.itemAnimator = androidx.recyclerview.widget.DefaultItemAnimator()
         recyclerView.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
         adaptador.notifyDataSetChanged()
+        adaptador.onItemClick = {
+            val intent1 = Intent(this, ChatActivity::class.java)
+            startActivity(intent1)
+        }
 
 
     }

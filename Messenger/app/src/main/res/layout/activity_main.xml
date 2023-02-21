@@ -13,6 +13,6 @@
         android:background="#ffffff"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
-
     </androidx.recyclerview.widget.RecyclerView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

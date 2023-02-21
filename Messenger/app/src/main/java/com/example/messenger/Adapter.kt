@@ -14,18 +14,24 @@ class Adapter(
 
 ) : RecyclerView.Adapter<Adapter.ViewHolder>() {
 
+    var onItemClick: ((Usuario) -> Unit)? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_design, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        //val user = userList[position]
         val resource = userList[position].imageview1
         val name = userList[position].textview1
         val msg = userList[position].textview3
         val time = userList[position].textview2
         val line = userList[position].divider
         holder.setData(resource, name, msg, time, line)
+        holder.itemView.setOnClickListener{
+            onItemClick?.invoke(userList[position])
+        }
     }
 
     override fun getItemCount(): Int {
