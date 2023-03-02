@@ -73,14 +73,16 @@
         android:clipToPadding="false"
         android:orientation="vertical"
         android:overScrollMode="never"
-        app:stackFromEnd="true"
         android:padding="@dimen/_20sdp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground"
-        app:layout_constraintTop_toBottomOf="@+id/imageBack">
+        app:layout_constraintTop_toBottomOf="@+id/imageBack"
+        app:layout_constraintVertical_bias="0.0"
+        app:stackFromEnd="true"
+        tools:layout_editor_absoluteX="0dp">
 
     </androidx.recyclerview.widget.RecyclerView>
-    
+
     <FrameLayout
         android:id="@+id/layoutSend"
         android:layout_width="@dimen/_40sdp"
@@ -110,7 +112,7 @@
         android:layout_height="@dimen/_40sdp"
         android:layout_marginStart="@dimen/_16sdp"
         android:layout_marginEnd="@dimen/_8sdp"
-        android:layout_marginBottom="@dimen/_16sdp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/background_chat_input"
         android:hint="Mensaje"
         android:imeOptions="actionDone"
@@ -122,9 +124,8 @@
         android:textColorHint="@color/design_default_color_on_primary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/layoutSend"
-        app:layout_constraintStart_toStartOf="parent">
-    </EditText>
-
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"></EditText>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
