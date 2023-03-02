@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/viewBackground_top"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_top_color"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-16dp">
+    </View>
+
+    <ImageView
+        android:id="@+id/imageReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/viewBackground_botton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewBackground_top"
+        app:layout_constraintVertical_bias="0.238"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <View
+        android:id="@+id/viewBackground_botton"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_bottom_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+    </View>
+
+    <View
+        android:id="@+id/viewProgressBarWhite"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/background_space_white"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_botton"
+        app:layout_constraintEnd_toEndOf="@+id/viewBackground_botton"
+        app:layout_constraintStart_toStartOf="@+id/viewBackground_botton"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground_botton">
+    </View>
+
+    <View
+        android:id="@+id/viewProgressBarBlue"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/background_space_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_botton"
+        app:layout_constraintEnd_toEndOf="@+id/viewBackground_botton"
+        app:layout_constraintStart_toStartOf="@+id/viewBackground_botton"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground_botton">
+    </View>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
