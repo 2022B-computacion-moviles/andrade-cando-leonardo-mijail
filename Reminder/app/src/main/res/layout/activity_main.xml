@@ -34,6 +34,15 @@
     </ImageView>
 
     <View
+        android:id="@+id/viewBackground_bottom_log_in"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_bottom_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+    </View>
+
+    <View
         android:id="@+id/viewBackground_bottom"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -72,9 +81,9 @@
 
 
     <View
-        android:id="@+id/backgroundButton"
-        android:layout_width="160dp"
-        android:layout_height="30dp"
+        android:id="@+id/backgroundButton_login"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
         android:layout_marginTop="56dp"
         android:background="@drawable/background_button_login"
         app:layout_constraintBottom_toTopOf="@+id/viewBackground_bottom"
@@ -89,7 +98,7 @@
         android:id="@+id/id_button_login"
         style="@android:style/Widget.Button"
         android:layout_width="100dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:background="@drawable/background_button_login"
         android:drawableLeft="@drawable/icon_login"
         android:drawableTint="#FFFFFF"
@@ -97,12 +106,46 @@
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/backgroundButton"
-        app:layout_constraintEnd_toEndOf="@+id/backgroundButton"
-        app:layout_constraintHorizontal_bias="0.456"
-        app:layout_constraintStart_toStartOf="@+id/backgroundButton"
-        app:layout_constraintTop_toTopOf="@+id/backgroundButton"
-        app:layout_constraintVertical_bias="0.331">
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundButton_login"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundButton_login"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="@+id/backgroundButton_login"
+        app:layout_constraintTop_toTopOf="@+id/backgroundButton_login"
+        app:layout_constraintVertical_bias="0.388"
+        android:alpha="0.9">
+    </Button>
+
+    <View
+        android:id="@+id/backgroundButton_signin"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/background_button_signin"
+        app:layout_constraintBottom_toTopOf="@+id/viewBackground_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageReminder"
+        app:layout_constraintVertical_bias="0.404">
+    </View>
+
+    <Button
+        android:id="@+id/id_button_signin"
+        style="@android:style/Widget.Button"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:background="@drawable/background_button_signin"
+        android:drawableLeft="@drawable/icon_signin"
+        android:drawableTint="#EC2129"
+        android:text="Sign in"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundButton_signin"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundButton_signin"
+        app:layout_constraintStart_toStartOf="@+id/backgroundButton_signin"
+        app:layout_constraintTop_toTopOf="@+id/backgroundButton_signin"
+        app:layout_constraintVertical_bias="0.0">
 
     </Button>
 
