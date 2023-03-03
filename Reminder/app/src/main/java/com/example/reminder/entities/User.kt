@@ -11,7 +11,7 @@ class User(
     val email_user: String,
     val password: String,
     @PrimaryKey(autoGenerate = true)
-    val id_User: Int,
+    var id_User: Int = 0,
     ):Serializable {
 
 }

@@ -1,6 +1,8 @@
 package com.example.reminder.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
+import androidx.room.Ignore
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.reminder.entities.User
@@ -9,4 +11,10 @@ import com.example.reminder.entities.User
 interface UserDao {
     @Insert
     fun insertAll(vararg usr: User)
+
+    @Query("SELECT * FROM USER WHERE USER.email_user = :id")
+    @Ignore
+    fun obtener(id:String): LiveData<User>
+
+
 }
