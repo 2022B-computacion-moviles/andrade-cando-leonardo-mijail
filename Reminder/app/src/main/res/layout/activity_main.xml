@@ -130,7 +130,7 @@
     </View>
 
     <Button
-        android:id="@+id/id_button_signin"
+        android:id="@+id/id_button_signin_ac"
         style="@android:style/Widget.Button"
         android:layout_width="100dp"
         android:layout_height="48dp"
