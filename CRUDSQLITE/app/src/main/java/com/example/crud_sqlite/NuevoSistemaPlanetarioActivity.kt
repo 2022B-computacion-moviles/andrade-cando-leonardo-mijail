@@ -41,7 +41,7 @@ class NuevoSistemaPlanetarioActivity : AppCompatActivity() {
             val galaxia = findViewById<TextView>(R.id.t_galaxia_sistema_planetario).text.toString()
             val tipo = findViewById<TextView>(R.id.t_tipo_sistema_planetario).text.toString()
 
-            val sistema_planetario = SistemaPlanetario(nombre,anio,galaxia,tipo, R.drawable.ic_launcher_background)
+            val sistema_planetario = SistemaPldanetario(nombre,anio,galaxia,tipo, R.drawable.ic_launcher_background)
 
             if(id_sistema_planetario != null){
                 CoroutineScope(Dispatchers.IO).launch {
