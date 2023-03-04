@@ -40,68 +40,82 @@
         tools:layout_editor_absoluteX="0dp">
     </View>
 
-    <View
-        android:id="@+id/viewBannerOpen"
+    <Button
+        android:id="@+id/id_button_pending"
+        style="@android:style/Widget.Button"
         android:layout_width="137dp"
         android:layout_height="25dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="274dp"
+        android:layout_marginBottom="2dp"
         android:background="@drawable/background_banner_actual"
-        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/viewBackground_top"
-        app:layout_constraintVertical_bias="0.6"
-        tools:ignore="MissingConstraints">
-    </View>
-
-    <View
-        android:id="@+id/viewBannerClose1"
-        android:layout_width="137dp"
-        android:layout_height="25dp"
-        android:background="@drawable/background_banner_no_actual"
+        android:text="PENDING"
+        android:textColor="#FFFFFF"
+        android:textSize="9dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
         app:layout_constraintEnd_toEndOf="@+id/viewBackground_top"
-        app:layout_constraintTop_toTopOf="@+id/viewBackground_top"
-        app:layout_constraintVertical_bias="0.6"
-        tools:ignore="MissingConstraints">
-    </View>
+        app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
+    </Button>
 
-    <View
-        android:id="@+id/viewBannerClose2"
+    <Button
+        android:id="@+id/id_button_completed"
+        style="@android:style/Widget.Button"
         android:layout_width="137dp"
         android:layout_height="25dp"
         android:background="@drawable/background_banner_no_actual"
+        android:text="COMPLETED"
+        android:textColor="#FFFFFF"
+        android:textSize="9dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
-        app:layout_constraintEnd_toStartOf="@+id/viewBannerClose1"
-        app:layout_constraintStart_toEndOf="@+id/viewBannerOpen"
-        app:layout_constraintTop_toTopOf="@+id/viewBackground_top"
-        app:layout_constraintVertical_bias="0.6">
-    </View>
+        app:layout_constraintEnd_toStartOf="@+id/viewBackground_top"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/id_button_pending"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
+    </Button>
+
+    <Button
+        android:id="@+id/id_button_overdue"
+        style="@android:style/Widget.Button"
+        android:layout_width="136dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="137dp"
+        android:background="@drawable/background_banner_no_actual"
+        android:text="OVERDUE"
+        android:textColor="#FFFFFF"
+        android:textSize="9dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_button_pending"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
+    </Button>
 
     <ListView
         android:id="@+id/list_view"
-        android:layout_width="388dp"
-        android:layout_height="390dp"
-        android:layout_marginBottom="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/backgroundButton_login"
+        android:layout_width="345dp"
+        android:layout_height="443dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_bottom_log_in"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/imageReminder"
+        app:layout_constraintVertical_bias="0.765" />
 
     <TextView
         android:id="@+id/date_filter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:text="Date:________________"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/list_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewBackground_top"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <View
         android:id="@+id/backgroundButton_login"
