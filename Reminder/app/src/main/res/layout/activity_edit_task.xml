@@ -91,6 +91,7 @@
         app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
     </Button>
 
+
     <TextView
         android:id="@+id/date_filter"
         android:layout_width="wrap_content"
@@ -100,24 +101,22 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.169" />
-
+        app:layout_constraintVertical_bias="0.218" />
 
     <View
         android:id="@+id/view"
-        android:layout_width="375dp"
-        android:layout_height="446dp"
+        android:layout_width="373dp"
+        android:layout_height="399dp"
         android:background="@drawable/background_space_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.505">
-    </View>
+        app:layout_constraintVertical_bias="0.571"></View>
 
     <TextView
         android:id="@+id/l1"
