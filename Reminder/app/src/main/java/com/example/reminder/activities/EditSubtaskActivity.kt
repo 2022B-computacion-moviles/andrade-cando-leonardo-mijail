@@ -2,6 +2,7 @@ package com.example.reminder.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.reminder.R
 
 class EditSubtaskActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

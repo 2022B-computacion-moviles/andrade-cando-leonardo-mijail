@@ -39,6 +39,7 @@ class LoginActivity : AppCompatActivity() {
                 if(email == user.email_user && password == user.password){
                     val intent = Intent(this,TasksActivity::class.java)
                     startActivity(intent)
+                    //pk usuario
                 }else{
                     val toast = Toast.makeText(this,"Credentials not fund", Toast.LENGTH_SHORT)
                     toast.show()

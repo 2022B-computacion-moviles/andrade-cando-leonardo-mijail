@@ -18,8 +18,6 @@ interface SistemaPlanetarioDao {
     @Update
     fun update(sistemaplanetario: SistemaPlanetario)
 
-    @Query("DELETE FROM SistemaPlanetario WHERE id_sistema_planetario = :id")
-    fun del(id: Int)
 
     @Delete
     fun delete(sistemaplanetario: SistemaPlanetario)

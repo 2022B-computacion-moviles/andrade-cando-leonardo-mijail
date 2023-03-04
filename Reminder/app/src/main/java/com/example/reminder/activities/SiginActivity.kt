@@ -30,8 +30,10 @@ class SiginActivity : AppCompatActivity() {
                 val usr = User(name, lastname,email,password)
                 CoroutineScope(Dispatchers.IO).launch {
                     dataBase.user().insertAll(usr)
-                    this@SiginActivity.finish()
                 }
+                val toast = Toast.makeText(this,"Register succesfull", Toast.LENGTH_SHORT)
+                toast.show()
+                this@SiginActivity.finish()
             }else{
                 val toast = Toast.makeText(this,"Passwords do NOT match",Toast.LENGTH_SHORT)
                 toast.show()
