@@ -32,16 +32,17 @@ class LoginActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             val email = findViewById<TextView>(R.id.id_log_email).text.toString()
             val password = findViewById<TextView>(R.id.id_log_password).text.toString()
-            userLiveData = dataBase.user().obtener(email)
+            userLiveData = dataBase.user().getMail(email)
 
             userLiveData.observe(this, Observer {
                 user = it
                 if(email == user.email_user && password == user.password){
                     val intent = Intent(this,TasksActivity::class.java)
+                    intent.putExtra("id_usr",user.id_User)
                     startActivity(intent)
                     //pk usuario
                 }else{
-                    val toast = Toast.makeText(this,"Credentials not fund", Toast.LENGTH_SHORT)
+                    val toast = Toast.makeText(this,"Credentials not found", Toast.LENGTH_SHORT)
                     toast.show()
                 }
             })

@@ -160,11 +160,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.535" />
 
-    <TextView
+    <EditText
         android:id="@+id/description_task"
         android:layout_width="257dp"
         android:layout_height="25dp"
-        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        android:background="@drawable/background_space_white"
+        android:hint="Edit a description of the task"
+        android:textColorHint="#555050"
         android:textColor="#555050"
         android:textSize="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -400,11 +402,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.535" />
 
-    <TextView
-        android:id="@+id/fecha_task"
+    <EditText
+        android:id="@+id/date_task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="16-01-2023"
+        android:background="@drawable/background_space_white"
+        android:hint="dd-mm-yyyy"
+        android:textColorHint="#555050"
         android:textColor="#555050"
         android:textSize="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -514,11 +518,13 @@
         app:layout_constraintVertical_bias="0.606">
     </Button>
 
-    <TextView
+    <EditText
         android:id="@+id/name_task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Task 1"
+        android:background="@drawable/background_space_white"
+        android:hint="Task 1"
+        android:textColorHint="@color/black"
         android:textColor="@color/black"
         android:textSize="14dp"
         android:textStyle="bold"

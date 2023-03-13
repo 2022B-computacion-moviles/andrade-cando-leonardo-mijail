@@ -12,9 +12,9 @@ interface UserDao {
     @Insert
     fun insertAll(vararg usr: User)
 
-    @Query("SELECT * FROM USER WHERE USER.email_user = :id")
+    @Query("SELECT * FROM USER WHERE USER.email_user = :email")
     @Ignore
-    fun obtener(id:String): LiveData<User>
+    fun getMail(email:String): LiveData<User>
 
 
 }
