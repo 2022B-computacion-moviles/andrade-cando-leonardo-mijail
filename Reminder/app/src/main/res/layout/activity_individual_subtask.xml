@@ -185,7 +185,7 @@
     </Button>
 
     <EditText
-        android:id="@+id/description_task"
+        android:id="@+id/description_subtask"
         android:layout_width="257dp"
         android:layout_height="25dp"
         android:background="@drawable/background_space_white"

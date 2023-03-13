@@ -91,7 +91,7 @@
     </Button>
 
     <ListView
-        android:id="@+id/list_view"
+        android:id="@+id/task_list_view"
         android:layout_width="370dp"
         android:layout_height="392dp"
         android:layout_marginBottom="100dp"
@@ -103,18 +103,34 @@
         app:layout_constraintVertical_bias="0.72" />
 
     <TextView
+        android:id="@+id/tv_date_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:text="Date:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/task_list_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.62" />
+
+    <TextView
         android:id="@+id/date_filter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date:________________"
+        android:layout_marginTop="116dp"
+        android:text="dd-mm-yyyy"
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/list_view"
+        app:layout_constraintBottom_toTopOf="@+id/task_list_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintHorizontal_bias="0.342"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.62" />
 
     <View
         android:id="@+id/backgroundButton_login"

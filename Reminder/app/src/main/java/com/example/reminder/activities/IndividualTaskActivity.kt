@@ -20,48 +20,6 @@ class IndividualTaskActivity : AppCompatActivity() {
         //database
         val database = AppDataBase.getDatabase(this)
 
-        val buttonSetPriority1 = findViewById<Button>(R.id.btnPriority1)
-        val buttonSetPriority2 = findViewById<Button>(R.id.btnPriority2)
-        val buttonSetPriority3 = findViewById<Button>(R.id.btnPriority3)
-        val buttonSetPriority4 = findViewById<Button>(R.id.btnPriority4)
-
-        buttonSetPriority1.setOnClickListener {
-            val lvl_priority_task = 1
-        }
-
-        buttonSetPriority2.setOnClickListener {
-            val lvl_priority_task = 2
-        }
-
-        buttonSetPriority3.setOnClickListener {
-            val lvl_priority_task = 3
-        }
-
-        buttonSetPriority4.setOnClickListener {
-            val lvl_priority_task = 4
-        }
-
-        val buttonSetTag1 = findViewById<Button>(R.id.btnLabel1)
-        val buttonSetTag2 = findViewById<Button>(R.id.btnLabel2)
-        val buttonSetTag3 = findViewById<Button>(R.id.btnLabel3)
-        val buttonSetTag4 = findViewById<Button>(R.id.btnLabel4)
-
-        buttonSetTag1.setOnClickListener {
-            val tag_task = "Trabajo"
-        }
-
-        buttonSetTag2.setOnClickListener {
-            val tag_task = "Escuela"
-        }
-
-        buttonSetTag3.setOnClickListener {
-            val tag_task = "Familia"
-        }
-
-        buttonSetTag4.setOnClickListener {
-            val tag_task = "Extras"
-        }
-
         //Extract data from forms
         val buttonSaveTask = findViewById<Button>(R.id.id_button_save_task)
         buttonSaveTask.setOnClickListener{
