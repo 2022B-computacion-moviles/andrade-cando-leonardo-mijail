@@ -19,8 +19,8 @@
 
     <ImageView
         android:id="@+id/imageReminder"
-        android:layout_width="164dp"
-        android:layout_height="125dp"
+        android:layout_width="241dp"
+        android:layout_height="185dp"
         android:layout_marginBottom="368dp"
         android:src="@drawable/logo_reminder"
         app:layout_constraintBottom_toTopOf="@+id/viewBackground_bottom"
@@ -106,7 +106,7 @@
         android:gravity="center"
         android:hint="*******"
         android:inputType="textPassword"
-        android:textColor="#7E7C7C"
+        android:textColor="@color/black"
         android:textColorHint="#7E7C7C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_log_email" />
@@ -119,7 +119,7 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/background_edit_text"
         android:hint="email@email.com"
-        android:textColor="#7E7C7C"
+        android:textColor="@color/black"
         android:textColorHint="#7E7C7C"
         android:ems="13"
         android:gravity="center"
@@ -151,7 +151,7 @@
         android:drawableTint="#FFFFFF"
         android:text="Log in"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="17dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundButton_login"
         app:layout_constraintEnd_toEndOf="@+id/backgroundButton_login"

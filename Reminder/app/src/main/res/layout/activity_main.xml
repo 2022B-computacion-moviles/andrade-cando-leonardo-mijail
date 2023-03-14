@@ -19,17 +19,16 @@
 
     <ImageView
         android:id="@+id/imageReminder"
-        android:layout_width="278dp"
-        android:layout_height="199dp"
+        android:layout_width="307dp"
+        android:layout_height="262dp"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="400dp"
         android:src="@drawable/logo_reminder"
         app:layout_constraintBottom_toTopOf="@+id/viewBackground_bottom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewBackground_top"
-        app:layout_constraintVertical_bias="0.392">
+        app:layout_constraintVertical_bias="0.32">
 
     </ImageView>
 
@@ -104,7 +103,7 @@
         android:drawableTint="#FFFFFF"
         android:text="Log in"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundButton_login"
         app:layout_constraintEnd_toEndOf="@+id/backgroundButton_login"
@@ -139,7 +138,7 @@
         android:drawableTint="#EC2129"
         android:text="Sign in"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundButton_signin"
         app:layout_constraintEnd_toEndOf="@+id/backgroundButton_signin"

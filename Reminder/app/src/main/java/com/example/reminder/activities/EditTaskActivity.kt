@@ -14,7 +14,7 @@ class EditTaskActivity : AppCompatActivity() {
         //receive intent from IndividualTaskActivity
         //val id_task =
 
-        val buttonAddSubTask = findViewById<Button>(R.id.id_button_add_subtask)
+        val buttonAddSubTask = findViewById<Button>(R.id.id_button_add_sub_task)
         buttonAddSubTask.setOnClickListener {
             val intent = Intent(this, IndividualSubtaskActivity::class.java)
             //intent.putExtra("id_task", id_task)

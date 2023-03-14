@@ -8,6 +8,371 @@
     tools:context=".activities.EditTaskActivity">
 
     <View
+        android:id="@+id/view2"
+        android:layout_width="358dp"
+        android:layout_height="364dp"
+        android:background="@drawable/background_space_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.531" />
+
+    <TextView
+        android:id="@+id/tv_priority_edit_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Priority:"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/p7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P1"
+        android:textColor="#555050"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.564" />
+
+    <TextView
+        android:id="@+id/p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="P3"
+        android:textColor="#555050"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.564" />
+
+    <TextView
+        android:id="@+id/p6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="P4"
+        android:textColor="#555050"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.564" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-100dp"
+        android:layout_marginBottom="-10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_bottom_log_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageReminder"
+        app:layout_constraintVertical_bias="0.533">
+
+        <RadioButton
+            android:id="@+id/radioButton_p1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#EC2129" />
+
+        <RadioButton
+            android:id="@+id/radioButton_p2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#0CA678" />
+
+        <RadioButton
+            android:id="@+id/radioButton_p3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#2410DD" />
+
+        <RadioButton
+            android:id="@+id/radioButton_p4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FFD43B" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/p5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-2dp"
+        android:text="P2"
+        android:textColor="#555050"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.339"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.564" />
+
+    <View
+        android:id="@+id/backgroundButton_edit_task"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="308dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="41dp"
+        android:background="@drawable/background_button_login"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/id_button_save_edit_task"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toStartOf="@+id/id_button_save_edit_task"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.0"></View>
+
+    <TextView
+        android:id="@+id/l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Family"
+        android:textColor="#555050"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.645" />
+
+    <Button
+        android:id="@+id/id_button_save_edit_task"
+        style="@android:style/Widget.Button"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:alpha="0.9"
+        android:background="@drawable/background_button_login"
+        android:drawableLeft="@drawable/icon_add"
+        android:text="Save task"
+        android:textColor="#FFFFFF"
+        android:textSize="17dp"
+        android:textStyle="bold"
+
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="503dp">
+    </Button>
+
+    <TextView
+        android:id="@+id/l5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Work"
+        android:textColor="#555050"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.247"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.645" />
+
+    <TextView
+        android:id="@+id/tv_label_edit_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Label:"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.256"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.603" />
+
+    <EditText
+        android:id="@+id/description_edit_task"
+        android:layout_width="257dp"
+        android:layout_height="25dp"
+        android:background="@drawable/background_space_white"
+        android:hint="Add a description of the taks."
+        android:textColor="#555050"
+        android:textColorHint="#555050"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.623"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.383" />
+
+    <EditText
+        android:id="@+id/date_edit_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_space_white"
+        android:hint="dd-mm-yyyy"
+        android:textColor="#555050"
+        android:textColorHint="#555050"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.452" />
+
+    <TextView
+        android:id="@+id/l6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Extra"
+        android:textColor="#555050"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.645" />
+
+    <TextView
+        android:id="@+id/tv_date_edit_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date:"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.423" />
+
+    <TextView
+        android:id="@+id/tv_description_edit_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <CheckBox
+        android:id="@+id/checkBox_edit_task"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:buttonTint="@color/black"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-100dp"
+        android:layout_marginBottom="-200dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_bottom_log_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageReminder">
+
+        <RadioButton
+            android:id="@+id/radioButton_l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#EC2129" />
+
+        <RadioButton
+            android:id="@+id/radioButton_l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#0CA678" />
+
+        <RadioButton
+            android:id="@+id/radioButton_l3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#2410DD" />
+
+        <RadioButton
+            android:id="@+id/radioButton_l4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FFD43B" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/l7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="School"
+        android:textColor="#555050"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.322"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.645" />
+
+    <EditText
+        android:id="@+id/name_edit_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_space_white"
+        android:hint="Task 1"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.309" />
+
+    <View
         android:id="@+id/viewBackground_top"
         android:layout_width="match_parent"
         android:layout_height="29dp"
@@ -15,20 +380,6 @@
         app:layout_constraintTop_toBottomOf="@+id/imageReminder"
         tools:layout_editor_absoluteX="2dp">
     </View>
-
-    <ImageView
-        android:id="@+id/imageReminder"
-        android:layout_width="147dp"
-        android:layout_height="90dp"
-        android:layout_marginBottom="524dp"
-        android:src="@drawable/logo_reminder"
-        app:layout_constraintBottom_toTopOf="@+id/viewBackground_bottom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-    </ImageView>
 
     <View
         android:id="@+id/viewBackground_bottom_log_in"
@@ -39,6 +390,18 @@
         tools:layout_editor_absoluteX="0dp">
     </View>
 
+    <ImageView
+        android:id="@+id/imageReminder"
+        android:layout_width="164dp"
+        android:layout_height="103dp"
+        android:layout_marginBottom="524dp"
+        android:src="@drawable/logo_reminder"
+        app:layout_constraintBottom_toTopOf="@+id/viewBackground_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+    </ImageView>
     <Button
         android:id="@+id/id_button_pending"
         style="@android:style/Widget.Button"
@@ -50,7 +413,7 @@
         android:background="@drawable/background_banner_actual"
         android:text="PENDING"
         android:textColor="#FFFFFF"
-        android:textSize="9dp"
+        android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
         app:layout_constraintEnd_toEndOf="@+id/viewBackground_top"
@@ -65,7 +428,7 @@
         android:background="@drawable/background_banner_no_actual"
         android:text="COMPLETED"
         android:textColor="#FFFFFF"
-        android:textSize="9dp"
+        android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
         app:layout_constraintEnd_toStartOf="@+id/viewBackground_top"
@@ -83,14 +446,13 @@
         android:background="@drawable/background_banner_no_actual"
         android:text="OVERDUE"
         android:textColor="#FFFFFF"
-        android:textSize="9dp"
+        android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/id_button_pending"
         app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
     </Button>
-
 
     <TextView
         android:id="@+id/date_filter"
@@ -101,449 +463,49 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218" />
+        app:layout_constraintVertical_bias="0.203" />
+
 
     <View
-        android:id="@+id/view"
-        android:layout_width="373dp"
-        android:layout_height="399dp"
-        android:background="@drawable/background_space_white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571"></View>
-
-    <TextView
-        android:id="@+id/l1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Trabajo"
-        android:textColor="#555050"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.259"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631" />
-
-    <TextView
-        android:id="@+id/p2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="P2"
-        android:textColor="#555050"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.355"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
-
-    <TextView
-        android:id="@+id/p3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="P3"
-        android:textColor="#555050"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.443"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
-
-    <EditText
-        android:id="@+id/description_task"
-        android:layout_width="257dp"
-        android:layout_height="25dp"
-        android:background="@drawable/background_space_white"
-        android:hint="Edit a description of the task"
-        android:textColorHint="#555050"
-        android:textColor="#555050"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.616"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.352" />
-
-    <TextView
-        android:id="@+id/l2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Educación"
-        android:textColor="#555050"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.378"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631" />
-
-
-    <Button
-        android:id="@+id/btnPriority2"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:background="@drawable/icon_check_box_outline"
-        android:backgroundTint="#0CA678"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.343"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.501">
-    </Button>
-
-    <TextView
-        android:id="@+id/l3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Familia"
-        android:textColor="#555050"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631" />
-
-    <Button
-        android:id="@+id/btnLabel1"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:background="@drawable/icon_radio_button"
-        android:backgroundTint="#EC2129"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.269"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606">
-    </Button>
-
-    <Button
-        android:id="@+id/btnLabel4"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:background="@drawable/icon_radio_button"
-        android:backgroundTint="#FFD43B"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.619"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606">
-    </Button>
-
-    <TextView
-        android:id="@+id/description_title_task"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Description:"
-        android:textColor="@color/black"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.265"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317" />
-
-    <TextView
-        android:id="@+id/description_priority_task"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Priority:"
-        android:textColor="@color/black"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.251"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467" />
-
-    <TextView
-        android:id="@+id/l4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Extras"
-        android:textColor="#555050"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.624"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631" />
-
-    <TextView
-        android:id="@+id/description_label_task"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Label:"
-        android:textColor="@color/black"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.246"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.577" />
-
-    <Button
-        android:id="@+id/btnLabel2"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:background="@drawable/icon_radio_button"
-        android:backgroundTint="#0CA678"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.383"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606">
-    </Button>
-
-    <Button
-        android:id="@+id/btnPriority3"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:background="@drawable/icon_check_box_outline"
-        android:backgroundTint="#2410DD"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.501">
-    </Button>
-
-    <View
-        android:id="@+id/viewBannerOpen"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:background="@drawable/icon_check_box_outline"
-        android:backgroundTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297"
-        tools:ignore="MissingConstraints">
-    </View>
-
-    <Button
-        android:id="@+id/btnPriority1"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:background="@drawable/icon_check_box_outline"
-        android:backgroundTint="#EC2129"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.501">
-    </Button>
-
-    <Button
-        android:id="@+id/btnPriority4"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:background="@drawable/icon_check_box_outline"
-        android:backgroundTint="#FFD43B"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.501">
-    </Button>
-
-    <TextView
-        android:id="@+id/description_date_task"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date:"
-        android:textColor="@color/black"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.244"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
-
-    <TextView
-        android:id="@+id/p1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="P1"
-        android:textColor="#555050"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.26"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
-
-    <EditText
-        android:id="@+id/date_task"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_space_white"
-        android:hint="dd-mm-yyyy"
-        android:textColorHint="#555050"
-        android:textColor="#555050"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.263"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.429" />
-
-    <View
-        android:id="@+id/backgroundButton_edit_task"
-        android:layout_width="170dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="311dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="41dp"
-        android:background="@drawable/background_button_login"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.017"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="1.0">
-    </View>
-
-    <Button
-        android:id="@+id/id_button_edit_task"
-        style="@android:style/Widget.Button"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:alpha="0.9"
-        android:background="@drawable/background_button_login"
-        android:drawableLeft="@drawable/icon_edit"
-        android:drawableTint="#EC2129"
-        android:text="Edit task"
-        android:textColor="#FFFFFF"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/backgroundButton_edit_task"
-        app:layout_constraintEnd_toEndOf="@+id/backgroundButton_edit_task"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="@+id/backgroundButton_edit_task"
-        app:layout_constraintTop_toTopOf="@+id/backgroundButton_edit_task"
-        app:layout_constraintVertical_bias="0.0">
-    </Button>
-
-    <View
-        android:id="@+id/backgroundButton_add_subtask"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:id="@+id/backgroundButton_add_sub_task"
+        android:layout_width="157dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="116dp"
         android:background="@drawable/background_button_signin"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.914"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.009">
+        app:layout_constraintEnd_toEndOf="@+id/id_button_add_sub_task"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="@+id/id_button_add_sub_task">
     </View>
 
     <Button
         android:id="@+id/id_button_add_sub_task"
         style="@android:style/Widget.Button"
-        android:layout_width="143dp"
-        android:layout_height="38dp"
+        android:layout_width="131dp"
+        android:layout_height="34dp"
         android:alpha="0.9"
         android:background="@drawable/background_button_signin"
         android:drawableLeft="@drawable/icon_add"
         android:drawableTint="#EC2129"
         android:text="Add subtask"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="17dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/backgroundButton_add_subtask"
-        app:layout_constraintEnd_toEndOf="@+id/backgroundButton_add_subtask"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="@+id/backgroundButton_add_subtask"
-        app:layout_constraintTop_toTopOf="@+id/backgroundButton_add_subtask"
-        app:layout_constraintVertical_bias="0.0">
+        tools:layout_editor_absoluteX="241dp"
+        tools:layout_editor_absoluteY="581dp">
     </Button>
-
-    <TextView
-        android:id="@+id/p4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="P4"
-        android:textColor="#555050"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
-
-    <Button
-        android:id="@+id/btnLabel3"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:background="@drawable/icon_radio_button"
-        android:backgroundTint="#2410DD"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606">
-    </Button>
-
-    <EditText
-        android:id="@+id/name_task"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_space_white"
-        android:hint="Task 1"
-        android:textColorHint="@color/black"
-        android:textColor="@color/black"
-        android:textSize="14dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.26"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.276" />
-
 
     <View
         android:id="@+id/viewBackground_bottom"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/background_bottom_color"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp">
-    </View>
+        tools:layout_editor_absoluteX="0dp"></View>
 
     <View
         android:id="@+id/viewProgressBarWhite"

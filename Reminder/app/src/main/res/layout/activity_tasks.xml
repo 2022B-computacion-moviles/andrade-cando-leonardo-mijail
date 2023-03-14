@@ -7,27 +7,15 @@
     android:background="@color/white"
     tools:context=".activities.TasksActivity">
 
-
-    <ImageView
-        android:id="@+id/imageReminder"
-        android:layout_width="147dp"
-        android:layout_height="90dp"
-        android:src="@drawable/logo_reminder"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-    </ImageView>
-
     <View
         android:id="@+id/viewBackground_top"
         android:layout_width="match_parent"
         android:layout_height="29dp"
         android:background="@drawable/background_banner"
+        app:layout_constraintBottom_toTopOf="@+id/task_list_view"
         app:layout_constraintTop_toBottomOf="@+id/imageReminder"
-        tools:layout_editor_absoluteX="2dp">
-    </View>
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp"></View>
 
     <View
         android:id="@+id/viewBackground_bottom_log_in"
@@ -37,6 +25,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="0dp">
     </View>
+
+    <ImageView
+        android:id="@+id/imageReminder"
+        android:layout_width="164dp"
+        android:layout_height="103dp"
+        android:layout_marginBottom="524dp"
+        android:src="@drawable/logo_reminder"
+        app:layout_constraintBottom_toTopOf="@+id/viewBackground_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+    </ImageView>
 
     <Button
         android:id="@+id/id_button_pending"
@@ -49,7 +50,7 @@
         android:background="@drawable/background_banner_actual"
         android:text="PENDING"
         android:textColor="#FFFFFF"
-        android:textSize="9dp"
+        android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
         app:layout_constraintEnd_toEndOf="@+id/viewBackground_top"
@@ -64,7 +65,7 @@
         android:background="@drawable/background_banner_no_actual"
         android:text="COMPLETED"
         android:textColor="#FFFFFF"
-        android:textSize="9dp"
+        android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
         app:layout_constraintEnd_toStartOf="@+id/viewBackground_top"
@@ -82,7 +83,7 @@
         android:background="@drawable/background_banner_no_actual"
         android:text="OVERDUE"
         android:textColor="#FFFFFF"
-        android:textSize="9dp"
+        android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,19 +95,16 @@
         android:id="@+id/task_list_view"
         android:layout_width="370dp"
         android:layout_height="392dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_bottom_log_in"
+        android:layout_marginTop="176dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageReminder"
-        app:layout_constraintVertical_bias="0.72" />
+        app:layout_constraintTop_toTopOf="@+id/imageReminder" />
 
     <TextView
         android:id="@+id/tv_date_filter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
         android:text="Date:"
         android:textColor="@color/black"
         android:textSize="20dp"
@@ -114,23 +112,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62" />
+        app:layout_constraintTop_toBottomOf="@+id/viewBackground_top" />
 
     <TextView
         android:id="@+id/date_filter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
         android:text="dd-mm-yyyy"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/task_list_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.342"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62" />
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toEndOf="@+id/tv_date_filter"
+        app:layout_constraintTop_toBottomOf="@+id/viewBackground_top" />
 
     <View
         android:id="@+id/backgroundButton_login"
@@ -156,7 +151,7 @@
         android:drawableLeft="@drawable/icon_add"
         android:text="Add task"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundButton_login"
         app:layout_constraintEnd_toEndOf="@+id/backgroundButton_login"

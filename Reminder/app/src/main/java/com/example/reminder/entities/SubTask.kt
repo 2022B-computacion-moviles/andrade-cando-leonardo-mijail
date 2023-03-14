@@ -12,7 +12,7 @@ class SubTask(
     val lvl_priority_sub_task: Int,
     val status_sub_task:String,
     @PrimaryKey(autoGenerate = true)
-    var id_subTarea: Int = 0
+    var id_subTask: Int = 0
 ): Serializable {
 
 }

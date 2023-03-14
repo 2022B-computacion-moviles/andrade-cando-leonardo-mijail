@@ -12,7 +12,7 @@ import com.example.reminder.entities.User
 @Dao
 interface SubTaskDao {
 
-    @Query("SELECT * FROM TASK, SUBTASK WHERE SUBTASK.id_task = TASK.id_task")
+    @Query("SELECT * FROM TASK, SUBTASK WHERE SUBTASK.id_task = TASK.id_task AND TASK.id_task = :id")
     fun getSubTaskbyTask(id:Int): LiveData<List<SubTask>>
 
     @Insert

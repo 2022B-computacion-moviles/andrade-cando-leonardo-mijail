@@ -12,14 +12,14 @@
         android:layout_height="wrap_content"
         android:text="Task 1"
         android:textColor="@color/black"
-        android:textSize="14dp"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toEndOf="@+id/viewBannerOpen"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_task"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285" />
+        app:layout_constraintVertical_bias="0.215" />
 
     <TextView
         android:id="@+id/description_task"
@@ -27,11 +27,11 @@
         android:layout_height="wrap_content"
         android:text="Description:"
         android:textColor="#555050"
-        android:textSize="10dp"
+        android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toEndOf="@+id/viewBannerOpen"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_task"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.672" />
 
@@ -49,18 +49,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.622" />
 
-    <View
-        android:id="@+id/viewBannerOpen"
+    <CheckBox
+        android:id="@+id/checkBox_task"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:background="@drawable/icon_check_box_outline"
+        android:buttonTint="@color/black"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-    </View>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/image_edit"

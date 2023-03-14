@@ -7,18 +7,6 @@
     android:background="@color/white"
     tools:context=".activities.SubTasksActivity">
 
-    <ImageView
-        android:id="@+id/imageReminder"
-        android:layout_width="147dp"
-        android:layout_height="90dp"
-        android:src="@drawable/logo_reminder"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-    </ImageView>
-
     <View
         android:id="@+id/viewBackground_top"
         android:layout_width="match_parent"
@@ -37,6 +25,18 @@
         tools:layout_editor_absoluteX="0dp">
     </View>
 
+    <ImageView
+        android:id="@+id/imageReminder"
+        android:layout_width="164dp"
+        android:layout_height="103dp"
+        android:layout_marginBottom="524dp"
+        android:src="@drawable/logo_reminder"
+        app:layout_constraintBottom_toTopOf="@+id/viewBackground_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+    </ImageView>
     <Button
         android:id="@+id/id_button_pending"
         style="@android:style/Widget.Button"
@@ -48,7 +48,7 @@
         android:background="@drawable/background_banner_actual"
         android:text="PENDING"
         android:textColor="#FFFFFF"
-        android:textSize="9dp"
+        android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
         app:layout_constraintEnd_toEndOf="@+id/viewBackground_top"
@@ -63,7 +63,7 @@
         android:background="@drawable/background_banner_no_actual"
         android:text="COMPLETED"
         android:textColor="#FFFFFF"
-        android:textSize="9dp"
+        android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
         app:layout_constraintEnd_toStartOf="@+id/viewBackground_top"
@@ -81,7 +81,7 @@
         android:background="@drawable/background_banner_no_actual"
         android:text="OVERDUE"
         android:textColor="#FFFFFF"
-        android:textSize="9dp"
+        android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
         app:layout_constraintEnd_toEndOf="parent"

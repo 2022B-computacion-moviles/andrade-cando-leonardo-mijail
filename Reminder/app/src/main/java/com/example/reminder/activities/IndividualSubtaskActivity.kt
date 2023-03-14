@@ -21,11 +21,11 @@ class IndividualSubtaskActivity : AppCompatActivity() {
         val database = AppDataBase.getDatabase(this)
 
         //Extract data from forms
-        val buttonSaveSubtask = findViewById<Button>(R.id.id_button_save_subtask)
+        val buttonSaveSubtask = findViewById<Button>(R.id.id_button_save_sub_task)
         buttonSaveSubtask.setOnClickListener {
             val id_task = 1
-            val name_sub_task = findViewById<EditText>(R.id.name_subtask).text.toString()
-            val description_sub_task = findViewById<EditText>(R.id.description_subtask).text.toString()
+            val name_sub_task = findViewById<EditText>(R.id.name_sub_task).text.toString()
+            val description_sub_task = findViewById<EditText>(R.id.description_sub_task).text.toString()
             val status_sub_task = "Pending"
             val subtask = SubTask(id_task,name_sub_task,description_sub_task,1,status_sub_task)
 
