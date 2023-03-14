@@ -14,8 +14,6 @@ class TaskAdapter (
     private val context: Context,
     private val taskList: List<Task>
     ): ArrayAdapter<Task>(context,0,taskList) {
-
-
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val layout = LayoutInflater.from(context).inflate(R.layout.item_view,parent,false)
         val task = taskList[position]

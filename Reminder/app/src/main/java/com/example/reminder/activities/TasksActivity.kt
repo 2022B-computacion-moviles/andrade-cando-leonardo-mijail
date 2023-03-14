@@ -19,12 +19,10 @@ class TasksActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tasks)
 
-        //receive intent from LoginActivity
+        // Receive intent from LoginActivity
         val id_user = intent.getIntExtra("id_usr",0)
 
-
-      
-        //lista de tareas
+        // Task list
         val database = AppDataBase.getDatabase(this)
         val list = findViewById<ListView>(R.id.task_list_view)
         database.task().getTaskbyUser(id_user).observe(this, Observer {
@@ -32,8 +30,6 @@ class TasksActivity : AppCompatActivity() {
             val taskAdapter = TaskAdapter(this,listTask)
             list.adapter = taskAdapter
         })
-
-
 
         val buttonAddTask = findViewById<Button>(R.id.id_button_add_task)
         buttonAddTask.setOnClickListener {

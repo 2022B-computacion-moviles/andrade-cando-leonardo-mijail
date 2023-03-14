@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.SubTasksActivity">
+
+    <ImageView
+        android:id="@+id/imageReminder"
+        android:layout_width="147dp"
+        android:layout_height="90dp"
+        android:src="@drawable/logo_reminder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+    </ImageView>
+
+    <View
+        android:id="@+id/viewBackground_top"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:background="@drawable/background_banner"
+        app:layout_constraintTop_toBottomOf="@+id/imageReminder"
+        tools:layout_editor_absoluteX="2dp">
+    </View>
+
+    <View
+        android:id="@+id/viewBackground_bottom_log_in"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_bottom_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+    </View>
+
+    <Button
+        android:id="@+id/id_button_pending"
+        style="@android:style/Widget.Button"
+        android:layout_width="137dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="274dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/background_banner_actual"
+        android:text="PENDING"
+        android:textColor="#FFFFFF"
+        android:textSize="9dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
+        app:layout_constraintEnd_toEndOf="@+id/viewBackground_top"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
+    </Button>
+
+    <Button
+        android:id="@+id/id_button_completed"
+        style="@android:style/Widget.Button"
+        android:layout_width="137dp"
+        android:layout_height="25dp"
+        android:background="@drawable/background_banner_no_actual"
+        android:text="COMPLETED"
+        android:textColor="#FFFFFF"
+        android:textSize="9dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
+        app:layout_constraintEnd_toStartOf="@+id/viewBackground_top"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/id_button_pending"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
+    </Button>
+
+    <Button
+        android:id="@+id/id_button_overdue"
+        style="@android:style/Widget.Button"
+        android:layout_width="136dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="137dp"
+        android:background="@drawable/background_banner_no_actual"
+        android:text="OVERDUE"
+        android:textColor="#FFFFFF"
+        android:textSize="9dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_button_pending"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
+    </Button>
+
+    <ListView
+        android:id="@+id/sub_task_list_view"
+        android:layout_width="359dp"
+        android:layout_height="429dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_bottom_log_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageReminder"
+        app:layout_constraintVertical_bias="0.888" />
+
+    <TextView
+        android:id="@+id/tv_date_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:text="Date:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/sub_task_list_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.62" />
+
+    <TextView
+        android:id="@+id/date_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:text="dd-mm-yyyy"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/sub_task_list_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.62" />
+
+    <View
+        android:id="@+id/viewBackground_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_bottom_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+    </View>
+
+    <View
+        android:id="@+id/viewProgressBarWhite"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/background_space_white"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_bottom"
+        app:layout_constraintEnd_toEndOf="@+id/viewBackground_bottom"
+        app:layout_constraintStart_toStartOf="@+id/viewBackground_bottom"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground_bottom">
+    </View>
+
+    <View
+        android:id="@+id/viewProgressBarBlue"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/background_space_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_bottom"
+        app:layout_constraintEnd_toEndOf="@+id/viewBackground_bottom"
+        app:layout_constraintStart_toStartOf="@+id/viewBackground_bottom"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground_bottom">
+    </View>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

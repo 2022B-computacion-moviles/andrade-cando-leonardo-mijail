@@ -333,7 +333,7 @@
     </View>
 
     <Button
-        android:id="@+id/id_button_save_subtask"
+        android:id="@+id/id_button_save_sub_task"
         style="@android:style/Widget.Button"
         android:layout_width="128dp"
         android:layout_height="32dp"

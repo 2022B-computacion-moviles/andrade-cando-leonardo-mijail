@@ -470,7 +470,7 @@
     </View>
 
     <Button
-        android:id="@+id/id_button_add_subtask"
+        android:id="@+id/id_button_add_sub_task"
         style="@android:style/Widget.Button"
         android:layout_width="143dp"
         android:layout_height="38dp"
