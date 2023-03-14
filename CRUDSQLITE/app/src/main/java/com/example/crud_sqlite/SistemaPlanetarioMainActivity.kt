@@ -31,9 +31,8 @@ class SistemaPlanetarioMainActivity : AppCompatActivity() {
             listaSistemaPlanetario = it
             val adapter = SistemaPlanetarioAdapter(this,listaSistemaPlanetario)
             lista.adapter = adapter
-
-
         })
+
         registerForContextMenu(lista)
 
         lista.setOnItemClickListener { parent, view, position, id ->

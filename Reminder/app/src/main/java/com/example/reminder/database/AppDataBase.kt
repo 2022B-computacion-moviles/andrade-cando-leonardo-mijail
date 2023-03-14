@@ -8,7 +8,7 @@ import com.example.reminder.entities.SubTask
 import com.example.reminder.entities.Task
 import com.example.reminder.entities.User
 
-@Database(entities = [User::class, Task::class, SubTask::class], version = 2)
+@Database(entities = [User::class, Task::class, SubTask::class], version = 3)
 abstract class AppDataBase :RoomDatabase (){
     abstract fun user (): UserDao
     abstract fun task(): TaskDao

@@ -31,5 +31,7 @@ class SubTasksActivity : AppCompatActivity() {
             list.adapter = subtaskAdapter
         })
 
+
+
     }
 }

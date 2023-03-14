@@ -3,11 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/editar_planeta"
-        android:title="Editar"
+        android:id="@+id/menu_edit"
+        android:icon="@drawable/icon_edit"
+        android:title="Edit"
         app:showAsAction="always"/>
     <item
-        android:id="@+id/eliminar_planeta"
-        android:title="Eliminar"
+        android:id="@+id/menu_delete"
+        android:icon="@drawable/icon_delete"
+        android:title="Delete"
         app:showAsAction="always"/>
 </menu>
