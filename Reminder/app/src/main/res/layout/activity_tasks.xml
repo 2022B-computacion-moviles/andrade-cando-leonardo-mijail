@@ -8,17 +8,6 @@
     tools:context=".activities.TasksActivity">
 
     <View
-        android:id="@+id/viewBackground_top"
-        android:layout_width="match_parent"
-        android:layout_height="29dp"
-        android:background="@drawable/background_banner"
-        app:layout_constraintBottom_toTopOf="@+id/task_list_view"
-        app:layout_constraintTop_toBottomOf="@+id/imageReminder"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp">
-    </View>
-
-    <View
         android:id="@+id/viewBackground_bottom_log_in"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -31,22 +20,30 @@
         android:id="@+id/imageReminder"
         android:layout_width="164dp"
         android:layout_height="103dp"
-        android:layout_marginBottom="524dp"
         android:src="@drawable/logo_reminder"
-        app:layout_constraintBottom_toTopOf="@+id/viewBackground_bottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
     </ImageView>
+
+
+    <View
+        android:id="@+id/viewBackground_top"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:background="@drawable/background_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageReminder">
+    </View>
 
     <Button
         android:id="@+id/id_button_pending"
         style="@android:style/Widget.Button"
         android:layout_width="137dp"
-        android:layout_height="25dp"
+        android:layout_height="28dp"
         android:layout_marginTop="2dp"
-        android:layout_marginEnd="274dp"
         android:layout_marginBottom="2dp"
         android:background="@drawable/background_banner_actual"
         android:text="PENDING"
@@ -55,6 +52,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
         app:layout_constraintEnd_toEndOf="@+id/viewBackground_top"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/viewBackground_top"
         app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
     </Button>
 
@@ -62,16 +61,16 @@
         android:id="@+id/id_button_completed"
         style="@android:style/Widget.Button"
         android:layout_width="137dp"
-        android:layout_height="25dp"
+        android:layout_height="28dp"
         android:background="@drawable/background_banner_no_actual"
         android:text="COMPLETED"
         android:textColor="#FFFFFF"
         android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
-        app:layout_constraintEnd_toStartOf="@+id/viewBackground_top"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/id_button_pending"
+        app:layout_constraintEnd_toEndOf="@+id/viewBackground_top"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/viewBackground_top"
         app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
     </Button>
 
@@ -79,28 +78,28 @@
         android:id="@+id/id_button_overdue"
         style="@android:style/Widget.Button"
         android:layout_width="136dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="137dp"
+        android:layout_height="28dp"
         android:background="@drawable/background_banner_no_actual"
         android:text="OVERDUE"
         android:textColor="#FFFFFF"
         android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/id_button_pending"
+        app:layout_constraintEnd_toEndOf="@+id/viewBackground_top"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/viewBackground_top"
         app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
     </Button>
-
     <ListView
         android:id="@+id/task_list_view"
         android:layout_width="370dp"
         android:layout_height="392dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="40dp"
+        android:padding="7dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageReminder" />
+        app:layout_constraintTop_toBottomOf="@+id/viewBackground_top" />
 
     <TextView
         android:id="@+id/tv_date_filter"
@@ -132,15 +131,11 @@
         android:id="@+id/backgroundButton_login"
         android:layout_width="170dp"
         android:layout_height="48dp"
-        android:layout_marginTop="56dp"
         android:background="@drawable/background_button_login"
-        app:layout_constraintBottom_toTopOf="@+id/viewBackground_bottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageReminder"
-        app:layout_constraintVertical_bias="0.967">
-    </View>
+        app:layout_constraintTop_toBottomOf="@+id/task_list_view"></View>
 
     <Button
         android:id="@+id/id_button_add_task"

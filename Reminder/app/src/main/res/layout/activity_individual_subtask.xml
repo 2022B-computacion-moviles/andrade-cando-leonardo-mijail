@@ -7,17 +7,85 @@
     android:background="@color/white"
     tools:context=".activities.IndividualSubtaskActivity">
 
+    <ImageView
+        android:id="@+id/imageReminder"
+        android:layout_width="164dp"
+        android:layout_height="103dp"
+        android:src="@drawable/logo_reminder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+    <View
+        android:id="@+id/viewBackground_top"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:background="@drawable/background_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageReminder"></View>
+
+    <Button
+        android:id="@+id/id_button_pending"
+        style="@android:style/Widget.Button"
+        android:layout_width="137dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/background_banner_actual"
+        android:text="PENDING"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
+        app:layout_constraintEnd_toEndOf="@+id/viewBackground_top"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/viewBackground_top"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground_top"></Button>
+
+    <Button
+        android:id="@+id/id_button_completed"
+        style="@android:style/Widget.Button"
+        android:layout_width="137dp"
+        android:layout_height="28dp"
+        android:background="@drawable/background_banner_no_actual"
+        android:text="COMPLETED"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
+        app:layout_constraintEnd_toEndOf="@+id/viewBackground_top"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/viewBackground_top"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground_top"></Button>
+
+    <Button
+        android:id="@+id/id_button_overdue"
+        style="@android:style/Widget.Button"
+        android:layout_width="136dp"
+        android:layout_height="28dp"
+        android:background="@drawable/background_banner_no_actual"
+        android:text="OVERDUE"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
+        app:layout_constraintEnd_toEndOf="@+id/viewBackground_top"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/viewBackground_top"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground_top"></Button>
+
     <View
         android:id="@+id/view3"
-        android:layout_width="356dp"
-        android:layout_height="298dp"
+        android:layout_width="341dp"
+        android:layout_height="292dp"
         android:background="@drawable/background_space_white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintHorizontal_bias="0.296"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_new_sb_task" />
 
     <Button
         android:id="@+id/id_button_save_sub_task"
@@ -45,29 +113,29 @@
         android:text="P4"
         android:textColor="#555050"
         android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.564" />
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.592" />
 
     <EditText
         android:id="@+id/name_sub_task"
-        android:layout_width="wrap_content"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:background="@drawable/background_space_white"
-        android:hint="Task 1"
+        android:hint="Subtask name"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.245"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.329" />
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.06" />
 
     <TextView
         android:id="@+id/p3_sub_task"
@@ -77,12 +145,12 @@
         android:text="P3"
         android:textColor="#555050"
         android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.564" />
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.592" />
 
     <TextView
         android:id="@+id/p1_sub_task"
@@ -91,27 +159,12 @@
         android:text="P1"
         android:textColor="#555050"
         android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.243"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.564" />
-
-    <TextView
-        android:id="@+id/tv_date_sub_task"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date:"
-        android:textColor="@color/black"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.245"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.592" />
 
     <TextView
         android:id="@+id/p2_sub_task"
@@ -121,12 +174,12 @@
         android:text="P2"
         android:textColor="#555050"
         android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.326"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.564" />
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.592" />
 
     <CheckBox
         android:id="@+id/checkBox_sub_task"
@@ -135,12 +188,12 @@
         android:buttonTint="@color/black"
         android:scaleX="1.5"
         android:scaleY="1.5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339" />
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.064" />
 
     <TextView
         android:id="@+id/tv_description_sub_task"
@@ -150,44 +203,28 @@
         android:textColor="@color/black"
         android:textSize="16dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.274"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.362" />
-
-    <EditText
-        android:id="@+id/date_sub_task"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_space_white"
-        android:hint="dd-mm-yyyy"
-        android:textColor="#555050"
-        android:textColorHint="#555050"
-        android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.273"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.459" />
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.159" />
 
     <EditText
         android:id="@+id/description_sub_task"
-        android:layout_width="257dp"
+        android:layout_width="260dp"
         android:layout_height="25dp"
         android:background="@drawable/background_space_white"
-        android:hint="Add a description of the taks."
+        android:hint="Add a description of the subtaks."
         android:textColor="#555050"
         android:textColorHint="#555050"
         android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.398" />
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.252" />
 
     <RadioGroup
         android:id="@+id/radioGroup_priority"
@@ -197,12 +234,12 @@
         android:layout_marginBottom="-10dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_bottom_log_in"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageReminder"
-        app:layout_constraintVertical_bias="0.526">
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.482">
 
         <RadioButton
             android:id="@+id/radio_Button_p1"
@@ -241,34 +278,20 @@
         android:textColor="@color/black"
         android:textSize="16dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.259"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.496" />
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.384" />
 
     <View
         android:id="@+id/backgroundButton_add_sub_task"
         android:layout_width="170dp"
         android:layout_height="48dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="216dp"
-        android:layout_marginEnd="44dp"
         android:background="@drawable/background_button_login"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3"></View>
-
-    <View
-        android:id="@+id/viewBackground_top"
-        android:layout_width="match_parent"
-        android:layout_height="29dp"
-        android:background="@drawable/background_banner"
-        app:layout_constraintTop_toBottomOf="@+id/imageReminder"
-        tools:layout_editor_absoluteX="2dp">
-    </View>
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="396dp"></View>
 
     <View
         android:id="@+id/viewBackground_bottom_log_in"
@@ -279,73 +302,9 @@
         tools:layout_editor_absoluteX="0dp">
     </View>
 
-    <ImageView
-        android:id="@+id/imageReminder"
-        android:layout_width="164dp"
-        android:layout_height="103dp"
-        android:layout_marginBottom="524dp"
-        android:src="@drawable/logo_reminder"
-        app:layout_constraintBottom_toTopOf="@+id/viewBackground_bottom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-    </ImageView>
-    <Button
-        android:id="@+id/id_button_pending"
-        style="@android:style/Widget.Button"
-        android:layout_width="137dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="274dp"
-        android:layout_marginBottom="2dp"
-        android:background="@drawable/background_banner_actual"
-        android:text="PENDING"
-        android:textColor="#FFFFFF"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
-        app:layout_constraintEnd_toEndOf="@+id/viewBackground_top"
-        app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
-    </Button>
-
-    <Button
-        android:id="@+id/id_button_completed"
-        style="@android:style/Widget.Button"
-        android:layout_width="137dp"
-        android:layout_height="25dp"
-        android:background="@drawable/background_banner_no_actual"
-        android:text="COMPLETED"
-        android:textColor="#FFFFFF"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
-        app:layout_constraintEnd_toStartOf="@+id/viewBackground_top"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/id_button_pending"
-        app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
-    </Button>
-
-    <Button
-        android:id="@+id/id_button_overdue"
-        style="@android:style/Widget.Button"
-        android:layout_width="136dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="137dp"
-        android:background="@drawable/background_banner_no_actual"
-        android:text="OVERDUE"
-        android:textColor="#FFFFFF"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/viewBackground_top"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/id_button_pending"
-        app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
-    </Button>
-
 
     <TextView
-        android:id="@+id/date_filter"
+        android:id="@+id/tv_new_sb_task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Subtask: "
@@ -353,19 +312,19 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23" />
+        app:layout_constraintTop_toBottomOf="@+id/viewBackground_top"
+        app:layout_constraintVertical_bias="0.026" />
 
     <View
         android:id="@+id/viewBackground_bottom"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/background_bottom_color"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp">
-    </View>
+        tools:layout_editor_absoluteX="0dp"></View>
 
     <View
         android:id="@+id/viewProgressBarWhite"

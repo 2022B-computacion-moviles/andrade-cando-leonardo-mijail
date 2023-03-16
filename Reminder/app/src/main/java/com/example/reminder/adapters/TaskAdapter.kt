@@ -22,6 +22,20 @@ class TaskAdapter (
         layout.findViewById<TextView>(R.id.description_task).text = task.description_task
         layout.findViewById<TextView>(R.id.date_task).text = task.date_task
 
+        when (task.lvl_priority_task) {
+            1 -> {
+                layout.setBackgroundResource(R.drawable.background_task_priority1)
+            }
+            2 -> {
+                layout.setBackgroundResource(R.drawable.background_task_priority2)
+            }
+            3 -> {
+                layout.setBackgroundResource(R.drawable.background_task_priority3)
+            }
+            4 -> {
+                layout.setBackgroundResource(R.drawable.background_task_priority4)
+            }
+        }
         return layout
     }
 }
