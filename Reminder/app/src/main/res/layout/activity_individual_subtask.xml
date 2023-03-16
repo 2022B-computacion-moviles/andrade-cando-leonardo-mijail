@@ -290,8 +290,12 @@
         android:layout_width="170dp"
         android:layout_height="48dp"
         android:background="@drawable/background_button_login"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="396dp"></View>
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.844"></View>
 
     <View
         android:id="@+id/viewBackground_bottom_log_in"
