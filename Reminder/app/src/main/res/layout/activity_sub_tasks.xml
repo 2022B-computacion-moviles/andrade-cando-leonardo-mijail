@@ -78,13 +78,13 @@
         android:layout_marginBottom="29dp"
         android:text="16-01-2023"
         android:textColor="#555050"
-        android:textSize="10dp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/task_father_list_subtask"
         app:layout_constraintEnd_toEndOf="@+id/task_father_list_subtask"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.952"
         app:layout_constraintStart_toStartOf="@+id/task_father_list_subtask"
         app:layout_constraintTop_toTopOf="@+id/task_father_list_subtask"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.2" />
 
     <TextView
         android:id="@+id/description_task2"
@@ -108,7 +108,7 @@
         android:id="@+id/priority_boton_task_subtasks"
         android:layout_width="12dp"
         android:layout_height="12dp"
-        android:background="@drawable/background_task_father3"
+        android:background="@drawable/background_task_priority1"
 
         app:layout_constraintBottom_toBottomOf="@+id/task_father_list_subtask"
         app:layout_constraintEnd_toStartOf="@+id/name_task_father_list_subtask"
@@ -129,30 +129,33 @@
         app:layout_constraintTop_toTopOf="@+id/task_father_list_subtask"
         app:layout_constraintVertical_bias="0.157" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/edit_task_list_subtask"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="#D9D9D9"
+        android:src="@drawable/icon_edit"
         app:layout_constraintBottom_toBottomOf="@+id/task_father_list_subtask"
         app:layout_constraintEnd_toStartOf="@+id/delete_task_list_subtask"
-        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/task_father_list_subtask"
         app:layout_constraintTop_toTopOf="@+id/task_father_list_subtask"
-        app:layout_constraintVertical_bias="0.166"
-        app:srcCompat="@drawable/icon_edit" />
+        app:layout_constraintVertical_bias="0.156" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/delete_task_list_subtask"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:backgroundTint="#D9D9D9"
+        android:src="@drawable/icon_delete"
         app:layout_constraintBottom_toBottomOf="@+id/task_father_list_subtask"
         app:layout_constraintEnd_toEndOf="@+id/task_father_list_subtask"
         app:layout_constraintHorizontal_bias="0.965"
         app:layout_constraintStart_toStartOf="@+id/task_father_list_subtask"
         app:layout_constraintTop_toTopOf="@+id/task_father_list_subtask"
         app:layout_constraintVertical_bias="0.166"
-        app:srcCompat="@drawable/icon_delete" />
+         />
 
     <View
         android:id="@+id/viewBackground_top"
@@ -238,8 +241,8 @@
 
     <ListView
         android:id="@+id/sub_task_list_view"
-        android:layout_width="359dp"
-        android:layout_height="307dp"
+        android:layout_width="358dp"
+        android:layout_height="292dp"
         android:layout_marginTop="27dp"
         android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_bottom_log_in"

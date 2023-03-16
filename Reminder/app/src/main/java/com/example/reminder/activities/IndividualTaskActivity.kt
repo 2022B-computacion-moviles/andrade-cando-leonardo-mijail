@@ -21,7 +21,7 @@ class IndividualTaskActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_individual_task)
-        //recive intent from TaskActivity
+        //receive intent from TaskActivity
         val id_user = intent.getIntExtra("id_usr",0)
         //database
         val database = AppDataBase.getDatabase(this)
