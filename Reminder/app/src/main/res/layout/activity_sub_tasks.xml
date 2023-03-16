@@ -7,19 +7,105 @@
     android:background="@color/white"
     tools:context=".activities.SubTasksActivity">
 
-    <View
-        android:id="@+id/task_father_list_subtask"
-        android:layout_width="372dp"
-        android:layout_height="25dp"
-        android:background="@drawable/background_task_father1"
+    <TextView
+        android:id="@+id/date_filter2"
+        android:layout_width="77dp"
+        android:layout_height="26dp"
+        android:text="Subtask: "
+        android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203"></View>
+        app:layout_constraintVertical_bias="0.373" />
+
+    <Button
+        android:id="@+id/id_button_add_sub_task"
+        style="@android:style/Widget.Button"
+        android:layout_width="131dp"
+        android:layout_height="34dp"
+        android:alpha="0.9"
+        android:background="@drawable/background_button_signin"
+        android:drawableLeft="@drawable/icon_add"
+        android:drawableTint="#EC2129"
+        android:text="Add subtask"
+        android:textColor="#FFFFFF"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.377"></Button>
+
     <View
-        android:id="@+id/green_boton_task3"
+        android:id="@+id/task_father_list_subtask"
+        android:layout_width="375dp"
+        android:layout_height="99dp"
+        android:background="@drawable/background_space_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.237"></View>
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="52dp"
+        android:layout_height="19dp"
+        android:text="Label:"
+        android:textColor="#555050"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/task_father_list_subtask"
+
+        app:layout_constraintEnd_toEndOf="@+id/task_father_list_subtask"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="@+id/task_father_list_subtask"
+        app:layout_constraintTop_toTopOf="@+id/task_father_list_subtask"
+        app:layout_constraintVertical_bias="0.875" />
+
+    <TextView
+        android:id="@+id/date_task2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="313dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="29dp"
+        android:text="16-01-2023"
+        android:textColor="#555050"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/task_father_list_subtask"
+        app:layout_constraintEnd_toEndOf="@+id/task_father_list_subtask"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/task_father_list_subtask"
+        app:layout_constraintTop_toTopOf="@+id/task_father_list_subtask"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/description_task2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="288dp"
+        android:layout_marginBottom="38dp"
+        android:text="Description:"
+        android:textColor="#555050"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="@+id/task_father_list_subtask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/task_father_list_subtask"
+        app:layout_constraintTop_toTopOf="@+id/task_father_list_subtask"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/priority_boton_task_subtasks"
         android:layout_width="12dp"
         android:layout_height="12dp"
         android:background="@drawable/background_task_father3"
@@ -41,7 +127,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/task_father_list_subtask"
         app:layout_constraintStart_toStartOf="@+id/task_father_list_subtask"
         app:layout_constraintTop_toTopOf="@+id/task_father_list_subtask"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.157" />
 
     <ImageView
         android:id="@+id/edit_task_list_subtask"
@@ -50,9 +136,10 @@
         android:layout_marginStart="300dp"
         app:layout_constraintBottom_toBottomOf="@+id/task_father_list_subtask"
         app:layout_constraintEnd_toStartOf="@+id/delete_task_list_subtask"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="@+id/task_father_list_subtask"
         app:layout_constraintTop_toTopOf="@+id/task_father_list_subtask"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.166"
         app:srcCompat="@drawable/icon_edit" />
 
     <ImageView
@@ -64,7 +151,7 @@
         app:layout_constraintHorizontal_bias="0.965"
         app:layout_constraintStart_toStartOf="@+id/task_father_list_subtask"
         app:layout_constraintTop_toTopOf="@+id/task_father_list_subtask"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.166"
         app:srcCompat="@drawable/icon_delete" />
 
     <View
@@ -152,14 +239,14 @@
     <ListView
         android:id="@+id/sub_task_list_view"
         android:layout_width="359dp"
-        android:layout_height="429dp"
+        android:layout_height="307dp"
+        android:layout_marginTop="27dp"
         android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="@+id/viewBackground_bottom_log_in"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageReminder"
-        app:layout_constraintVertical_bias="0.888" />
+        app:layout_constraintTop_toBottomOf="@+id/id_button_add_sub_task"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/viewBackground_bottom"

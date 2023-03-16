@@ -471,35 +471,6 @@
 
 
     <View
-        android:id="@+id/backgroundButton_add_sub_task"
-        android:layout_width="157dp"
-        android:layout_height="39dp"
-        android:layout_marginBottom="116dp"
-        android:background="@drawable/background_button_signin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/id_button_add_sub_task"
-        app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintStart_toStartOf="@+id/id_button_add_sub_task">
-    </View>
-
-    <Button
-        android:id="@+id/id_button_add_sub_task"
-        style="@android:style/Widget.Button"
-        android:layout_width="131dp"
-        android:layout_height="34dp"
-        android:alpha="0.9"
-        android:background="@drawable/background_button_signin"
-        android:drawableLeft="@drawable/icon_add"
-        android:drawableTint="#EC2129"
-        android:text="Add subtask"
-        android:textColor="#FFFFFF"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="241dp"
-        tools:layout_editor_absoluteY="581dp">
-    </Button>
-
-    <View
         android:id="@+id/viewBackground_bottom"
         android:layout_width="match_parent"
         android:layout_height="100dp"
