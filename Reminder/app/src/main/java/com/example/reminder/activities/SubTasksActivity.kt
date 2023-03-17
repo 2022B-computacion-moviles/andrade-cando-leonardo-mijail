@@ -6,7 +6,6 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ContextMenu
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
@@ -23,7 +22,7 @@ import kotlinx.coroutines.launch
 
 class SubTasksActivity : AppCompatActivity() {
 
-    var id_subtask = 0
+    var position_subtask = 0
     private var listSubTask = emptyList<SubTask>()
     private lateinit var taskLiveData: LiveData<Task>
     private lateinit var task: Task
@@ -128,7 +127,7 @@ class SubTasksActivity : AppCompatActivity() {
 
         val info = menuInfo as AdapterView.AdapterContextMenuInfo
         val id = info.position
-        id_subtask = id + 1
+        position_subtask = id
         //Toast.makeText(applicationContext,id_subtask.toString(),Toast.LENGTH_SHORT).show()
     }
 
@@ -137,13 +136,13 @@ class SubTasksActivity : AppCompatActivity() {
         return when (item.itemId){
             R.id.menu_edit->{
                 val intent = Intent(this,IndividualSubtaskActivity::class.java )
-                intent.putExtra("id_task_update",listSubTask[id_subtask].id_subTask)
+                intent.putExtra("id_subtask_update",listSubTask[position_subtask].id_subTask)
                 startActivity(intent)
                 return true
             }
             R.id.menu_delete ->{
                 CoroutineScope(Dispatchers.IO).launch {
-                    database.subtask().delete(listSubTask[id_subtask])
+                    database.subtask().delete(listSubTask[position_subtask])
                 }
                 return true
             }

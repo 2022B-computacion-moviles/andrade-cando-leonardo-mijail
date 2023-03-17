@@ -22,7 +22,7 @@ class IndividualSubtaskActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_individual_subtask)
         //receive intent from SubTaskActivity
-        val id_task = intent.getIntExtra("id_task",0)
+        var id_task = intent.getIntExtra("id_task",0)
 
         //initialization id task for update
         var id_subtask_update: Int? = null
@@ -30,7 +30,7 @@ class IndividualSubtaskActivity : AppCompatActivity() {
         //database
         val database = AppDataBase.getDatabase(this)
 
-        if(intent.hasExtra("id_task_update")){
+        if(intent.hasExtra("id_subtask_update")){
             //receive intent from SubTaskActivity - Update
             id_subtask_update = intent.getIntExtra("id_subtask_update",0)
             database.subtask().getSubTaskbyId(id_subtask_update).observe(this, Observer {
@@ -52,6 +52,7 @@ class IndividualSubtaskActivity : AppCompatActivity() {
                         findViewById<RadioButton>(R.id.radio_Button_p4).isChecked = true
                     }
                 }
+                id_task = subtask.id_task
 
             })
         }
@@ -59,7 +60,6 @@ class IndividualSubtaskActivity : AppCompatActivity() {
         //Extract data from forms - Insert
         val buttonSaveSubtask = findViewById<Button>(R.id.id_button_save_sub_task)
         buttonSaveSubtask.setOnClickListener {
-
             val name_sub_task = findViewById<EditText>(R.id.name_sub_task).text.toString()
             val description_sub_task = findViewById<EditText>(R.id.description_sub_task).text.toString()
             val status_sub_task = "Pending"
