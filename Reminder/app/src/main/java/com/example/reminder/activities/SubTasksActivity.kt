@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -22,7 +23,7 @@ import kotlinx.coroutines.launch
 
 class SubTasksActivity : AppCompatActivity() {
 
-    //private var id_sub_task = 0
+    var id_subtask = 0
     private var listSubTask = emptyList<SubTask>()
     private lateinit var taskLiveData: LiveData<Task>
     private lateinit var task: Task
@@ -55,7 +56,6 @@ class SubTasksActivity : AppCompatActivity() {
                     database.task().delete(task_delete)
                    this@SubTasksActivity.finish()
                 }
-
             }
 
         }else if(!intent.hasExtra("task_delete")){
@@ -94,6 +94,7 @@ class SubTasksActivity : AppCompatActivity() {
             val subtaskAdapter = SubTaskAdapter(this, listSubTask)
             list.adapter = subtaskAdapter
         })
+        registerForContextMenu(list)
 
         val buttonAddSubTask = findViewById<Button>(R.id.id_button_add_sub_task)
         buttonAddSubTask.setOnClickListener {
@@ -114,6 +115,39 @@ class SubTasksActivity : AppCompatActivity() {
             val intent = intent
             intent.putExtra("task_delete",task)
             startActivity(intent)
+        }
+    }
+
+    override fun onCreateContextMenu(
+        menu: ContextMenu?,
+        v: View?,
+        menuInfo: ContextMenu.ContextMenuInfo?
+    ) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        menuInflater.inflate(R.menu.menu,menu)
+
+        val info = menuInfo as AdapterView.AdapterContextMenuInfo
+        val id = info.position
+        id_subtask = id + 1
+        //Toast.makeText(applicationContext,id_subtask.toString(),Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+
+        return when (item.itemId){
+            R.id.menu_edit->{
+                val intent = Intent(this,IndividualSubtaskActivity::class.java )
+                intent.putExtra("id_task_update",listSubTask[id_subtask].id_subTask)
+                startActivity(intent)
+                return true
+            }
+            R.id.menu_delete ->{
+                CoroutineScope(Dispatchers.IO).launch {
+                    database.subtask().delete(listSubTask[id_subtask])
+                }
+                return true
+            }
+            else -> super.onContextItemSelected(item)
         }
     }
 }

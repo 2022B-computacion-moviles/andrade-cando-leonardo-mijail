@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 
 class IndividualSubtaskActivity : AppCompatActivity() {
     var lvl_priority_subtask = 0
-    private lateinit var task: Task
+    private lateinit var subtask: SubTask
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -25,47 +25,34 @@ class IndividualSubtaskActivity : AppCompatActivity() {
         val id_task = intent.getIntExtra("id_task",0)
 
         //initialization id task for update
-        var id_task_update: Int? = null
+        var id_subtask_update: Int? = null
 
         //database
         val database = AppDataBase.getDatabase(this)
 
         if(intent.hasExtra("id_task_update")){
             //receive intent from SubTaskActivity - Update
-            id_task_update = intent.getIntExtra("id_task_update",0)
-            database.task().getTaskByID(id_task_update).observe(this, Observer {
-                task = it
-                findViewById<TextView>(R.id.name_task).text = task.name_task
-                findViewById<TextView>(R.id.description_task).text = task.description_task
-                findViewById<TextView>(R.id.date_task).text = task.date_task
-                when (task.lvl_priority_task) {
+            id_subtask_update = intent.getIntExtra("id_subtask_update",0)
+            database.subtask().getSubTaskbyId(id_subtask_update).observe(this, Observer {
+                subtask = it
+                findViewById<TextView>(R.id.name_sub_task).text = subtask.name_sub_task
+                findViewById<TextView>(R.id.description_sub_task).text = subtask.description_sub_task
+
+                when (subtask.lvl_priority_sub_task) {
                     1 -> {
-                        findViewById<RadioButton>(R.id.radioButton_p1).isChecked = true
+                        findViewById<RadioButton>(R.id.radio_Button_p1).isChecked = true
                     }
                     2 -> {
-                        findViewById<RadioButton>(R.id.radioButton_p2).isChecked = true
+                        findViewById<RadioButton>(R.id.radio_Button_p2).isChecked = true
                     }
                     3 -> {
-                        findViewById<RadioButton>(R.id.radioButton_p3).isChecked = true
+                        findViewById<RadioButton>(R.id.radio_Button_p3).isChecked = true
                     }
                     4 -> {
-                        findViewById<RadioButton>(R.id.radioButton_p4).isChecked = true
+                        findViewById<RadioButton>(R.id.radio_Button_p4).isChecked = true
                     }
                 }
-                when (task.tag_task) {
-                    "Job" -> {
-                        findViewById<RadioButton>(R.id.radioButton_l1).isChecked = true
-                    }
-                    "School" -> {
-                        findViewById<RadioButton>(R.id.radioButton_l2).isChecked = true
-                    }
-                    "Family" -> {
-                        findViewById<RadioButton>(R.id.radioButton_l3).isChecked = true
-                    }
-                    "Extra" -> {
-                        findViewById<RadioButton>(R.id.radioButton_l4).isChecked = true
-                    }
-                }
+
             })
         }
 
@@ -78,7 +65,7 @@ class IndividualSubtaskActivity : AppCompatActivity() {
             val status_sub_task = "Pending"
             val subtask = SubTask(id_task,name_sub_task,description_sub_task,lvl_priority_subtask,status_sub_task)
 
-            if(id_task_update == null){
+            if(id_subtask_update == null){
                 //insert
                 CoroutineScope(Dispatchers.IO).launch {
                     database.subtask().insertAll(subtask)
@@ -86,6 +73,7 @@ class IndividualSubtaskActivity : AppCompatActivity() {
                 }
             }else{
                 //update
+                subtask.id_subTask = id_subtask_update
                 CoroutineScope(Dispatchers.IO).launch {
                     database.subtask().update(subtask)
                     this@IndividualSubtaskActivity.finish()

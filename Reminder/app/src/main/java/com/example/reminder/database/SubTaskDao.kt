@@ -15,6 +15,9 @@ interface SubTaskDao {
     @Query("SELECT * FROM TASK, SUBTASK WHERE SUBTASK.id_task = TASK.id_task AND TASK.id_task = :id")
     fun getSubTaskbyTask(id:Int): LiveData<List<SubTask>>
 
+    @Query("SELECT * FROM TASK, SUBTASK WHERE SUBTASK.id_task = TASK.id_task AND SUBTASK.id_task = :id")
+    fun getSubTaskbyId(id: Int): LiveData<SubTask>
+
     @Insert
     fun insertAll(vararg :SubTask)
 
