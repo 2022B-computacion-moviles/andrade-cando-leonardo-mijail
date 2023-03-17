@@ -91,7 +91,7 @@
     </ImageView>
 
     <TextView
-        android:id="@+id/date_filter"
+        android:id="@+id/tv_new_task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="556dp"
@@ -100,9 +100,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewBackground_top" />
+        app:layout_constraintTop_toBottomOf="@+id/viewBackground_top"
+        app:layout_constraintVertical_bias="0.026" />
 
     <View
         android:id="@+id/view"
@@ -110,9 +111,9 @@
         android:layout_height="428dp"
         android:background="@drawable/background_space_white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date_filter" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_new_task" />
 
     <RadioGroup
         android:id="@+id/radioGroup_label"
