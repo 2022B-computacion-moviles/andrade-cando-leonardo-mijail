@@ -15,7 +15,7 @@ interface TaskDao {
     fun getTaskbyUser(id:Int): LiveData<List<Task>>
 
     @Query("SELECT * FROM USER, TASK WHERE USER.id_User = TASK.id_User AND TASK.id_task =:id")
-    fun getTaskByID(id:Int):LiveData<Task>
+    fun getTaskByID(id:Int): LiveData<Task>
 
     @Insert
     fun insertAll(vararg task: Task)

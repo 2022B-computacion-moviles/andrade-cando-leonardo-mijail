@@ -2,15 +2,14 @@ package com.example.reminder.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ListView
-import android.widget.TextView
+import android.widget.*
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import com.example.reminder.R
 import com.example.reminder.adapters.SubTaskAdapter
@@ -25,38 +24,68 @@ class SubTasksActivity : AppCompatActivity() {
 
     //private var id_sub_task = 0
     private var listSubTask = emptyList<SubTask>()
+    private lateinit var taskLiveData: LiveData<Task>
     private lateinit var task: Task
+    private lateinit var database: AppDataBase
     @SuppressLint("UseCompatLoadingForDrawables")
-    override fun onCreate(savedInstanceState: Bundle?) {
+     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sub_tasks)
 
         //receive intent from LoginActivity
         val id_task = intent.getIntExtra("id_task", 0)
-        val database = AppDataBase.getDatabase(this)
+        database = AppDataBase.getDatabase(this)
+        taskLiveData = database.task().getTaskByID(id_task)
+        //delete
+        var task_delete: Task? = null
+
+
 
         //show info task
-        database.task().getTaskByID(id_task).observe(this, Observer {
-            task = it
-            findViewById<TextView>(R.id.name_task_father_list_subtask).text = task.name_task
-            findViewById<TextView>(R.id.description_task2).text = task.description_task
-            findViewById<TextView>(R.id.tv_tag).text = task.tag_task
-            findViewById<TextView>(R.id.date_task2).text = task.date_task
-            when (task.lvl_priority_task) {
-                1 -> {
-                    findViewById<View>(R.id.priority_boton_task_subtasks).background = resources.getDrawable(R.drawable.background_task_priority1)
-                }
-                2 -> {
-                    findViewById<View>(R.id.priority_boton_task_subtasks).background = resources.getDrawable(R.drawable.background_task_priority2)
-                }
-                3 -> {
-                    findViewById<View>(R.id.priority_boton_task_subtasks).background = resources.getDrawable(R.drawable.background_task_priority3)
-                }
-                4 -> {
-                    findViewById<View>(R.id.priority_boton_task_subtasks).background = resources.getDrawable(R.drawable.background_task_priority4)
-                }
+        if(intent.hasExtra("task_delete")){
+            //receive intent from SubTaskActivity - Update
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                task_delete = intent.getSerializableExtra("task_delete",Task::class.java)
             }
-        })
+            database.task().getTaskByID(id_task).removeObservers(this)
+            database.subtask().getSubTaskbyTask(id_task).removeObservers(this)
+
+            CoroutineScope(Dispatchers.IO).launch {
+                if (task_delete != null) {
+                    database.task().delete(task_delete)
+                   this@SubTasksActivity.finish()
+                }
+
+            }
+
+        }else if(!intent.hasExtra("task_delete")){
+            taskLiveData.observe(this, Observer {
+                if(it == null){
+                    this@SubTasksActivity.finish()
+                }else{
+                    task = it
+                    findViewById<TextView>(R.id.name_task_father_list_subtask).text = task.name_task
+                    findViewById<TextView>(R.id.description_task2).text = task.description_task
+                    findViewById<TextView>(R.id.tv_tag).text = task.tag_task
+                    findViewById<TextView>(R.id.date_task2).text = task.date_task
+                    when (task.lvl_priority_task) {
+                        1 -> {
+                            findViewById<View>(R.id.priority_boton_task_subtasks).background = resources.getDrawable(R.drawable.background_task_priority1)
+                        }
+                        2 -> {
+                            findViewById<View>(R.id.priority_boton_task_subtasks).background = resources.getDrawable(R.drawable.background_task_priority2)
+                        }
+                        3 -> {
+                            findViewById<View>(R.id.priority_boton_task_subtasks).background = resources.getDrawable(R.drawable.background_task_priority3)
+                        }
+                        4 -> {
+                            findViewById<View>(R.id.priority_boton_task_subtasks).background = resources.getDrawable(R.drawable.background_task_priority4)
+                        }
+                    }
+                }
+
+            })
+        }
 
         //SubTasks list
         val list = findViewById<ListView>(R.id.sub_task_list_view)
@@ -82,7 +111,7 @@ class SubTasksActivity : AppCompatActivity() {
 
         val buttonDeleteTask = findViewById<ImageButton>(R.id.delete_task_list_subtask)
         buttonDeleteTask.setOnClickListener {
-            val intent = Intent(this, TasksActivity::class.java)
+            val intent = intent
             intent.putExtra("task_delete",task)
             startActivity(intent)
         }
