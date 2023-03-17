@@ -17,6 +17,7 @@ import kotlinx.coroutines.launch
 class IndividualSubtaskActivity : AppCompatActivity() {
     var lvl_priority_subtask = 0
     private lateinit var subtask: SubTask
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
