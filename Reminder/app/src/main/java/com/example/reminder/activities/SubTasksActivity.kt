@@ -17,10 +17,13 @@ import com.example.reminder.adapters.SubTaskAdapter
 import com.example.reminder.database.AppDataBase
 import com.example.reminder.entities.SubTask
 import com.example.reminder.entities.Task
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class SubTasksActivity : AppCompatActivity() {
 
-    private var id_sub_task = 0
+    //private var id_sub_task = 0
     private var listSubTask = emptyList<SubTask>()
     private lateinit var task: Task
     @SuppressLint("UseCompatLoadingForDrawables")
@@ -39,7 +42,6 @@ class SubTasksActivity : AppCompatActivity() {
             findViewById<TextView>(R.id.description_task2).text = task.description_task
             findViewById<TextView>(R.id.tv_tag).text = task.tag_task
             findViewById<TextView>(R.id.date_task2).text = task.date_task
-
             when (task.lvl_priority_task) {
                 1 -> {
                     findViewById<View>(R.id.priority_boton_task_subtasks).background = resources.getDrawable(R.drawable.background_task_priority1)
@@ -74,9 +76,15 @@ class SubTasksActivity : AppCompatActivity() {
         val buttonEditTask = findViewById<ImageButton>(R.id.edit_task_list_subtask)
         buttonEditTask.setOnClickListener {
             val intent = Intent(this, IndividualTaskActivity::class.java)
-            intent.putExtra("id_task", id_task)
+            intent.putExtra("id_task_update", id_task)
             startActivity(intent)
         }
 
+        val buttonDeleteTask = findViewById<ImageButton>(R.id.delete_task_list_subtask)
+        buttonDeleteTask.setOnClickListener {
+            val intent = Intent(this, TasksActivity::class.java)
+            intent.putExtra("task_delete",task)
+            startActivity(intent)
+        }
     }
 }

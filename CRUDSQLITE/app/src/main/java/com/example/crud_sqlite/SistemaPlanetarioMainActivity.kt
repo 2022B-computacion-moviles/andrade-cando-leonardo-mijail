@@ -83,8 +83,6 @@ class SistemaPlanetarioMainActivity : AppCompatActivity() {
             R.id.ver_planetas ->{
                 val intent = Intent(this,PlanetaMainActivity::class.java )
                 intent.putExtra("id_sistema_planetario",listaSistemaPlanetario[id_sistema_planetario].id_sistema_planetario)
-
-
                 startActivity(intent)
                 return true
             }
