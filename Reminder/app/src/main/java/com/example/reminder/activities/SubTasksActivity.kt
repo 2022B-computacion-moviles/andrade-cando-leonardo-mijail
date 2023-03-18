@@ -10,7 +10,6 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
 import com.example.reminder.R
 import com.example.reminder.adapters.SubTaskAdapter
 import com.example.reminder.database.AppDataBase
@@ -20,9 +19,10 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+@Suppress("DEPRECATION")
 class SubTasksActivity : AppCompatActivity() {
 
-    var position_subtask = 0
+    private var position_subtask = 0
     private var listSubTask = emptyList<SubTask>()
     private lateinit var taskLiveData: LiveData<Task>
     private lateinit var task: Task
@@ -39,8 +39,6 @@ class SubTasksActivity : AppCompatActivity() {
         //delete
         var task_delete: Task? = null
 
-
-
         //show info task
         if(intent.hasExtra("task_delete")){
             //receive intent from SubTaskActivity - Update
@@ -56,12 +54,11 @@ class SubTasksActivity : AppCompatActivity() {
                    this@SubTasksActivity.finish()
                 }
             }
-
         }else if(!intent.hasExtra("task_delete")){
-            taskLiveData.observe(this, Observer {
-                if(it == null){
+            taskLiveData.observe(this) {
+                if (it == null) {
                     this@SubTasksActivity.finish()
-                }else{
+                } else {
                     task = it
                     findViewById<TextView>(R.id.name_task_father_list_subtask).text = task.name_task
                     findViewById<TextView>(R.id.description_task2).text = task.description_task
@@ -69,30 +66,34 @@ class SubTasksActivity : AppCompatActivity() {
                     findViewById<TextView>(R.id.date_task2).text = task.date_task
                     when (task.lvl_priority_task) {
                         1 -> {
-                            findViewById<View>(R.id.priority_boton_task_subtasks).background = resources.getDrawable(R.drawable.background_task_priority1)
+                            findViewById<View>(R.id.priority_boton_task_subtasks).background =
+                                resources.getDrawable(R.drawable.background_task_priority1)
                         }
                         2 -> {
-                            findViewById<View>(R.id.priority_boton_task_subtasks).background = resources.getDrawable(R.drawable.background_task_priority2)
+                            findViewById<View>(R.id.priority_boton_task_subtasks).background =
+                                resources.getDrawable(R.drawable.background_task_priority2)
                         }
                         3 -> {
-                            findViewById<View>(R.id.priority_boton_task_subtasks).background = resources.getDrawable(R.drawable.background_task_priority3)
+                            findViewById<View>(R.id.priority_boton_task_subtasks).background =
+                                resources.getDrawable(R.drawable.background_task_priority3)
                         }
                         4 -> {
-                            findViewById<View>(R.id.priority_boton_task_subtasks).background = resources.getDrawable(R.drawable.background_task_priority4)
+                            findViewById<View>(R.id.priority_boton_task_subtasks).background =
+                                resources.getDrawable(R.drawable.background_task_priority4)
                         }
                     }
                 }
 
-            })
+            }
         }
 
         //SubTasks list
         val list = findViewById<ListView>(R.id.sub_task_list_view)
-        database.subtask().getSubTaskbyTask(id_task).observe(this, Observer {
+        database.subtask().getSubTaskbyTask(id_task).observe(this) {
             listSubTask = it
             val subtaskAdapter = SubTaskAdapter(this, listSubTask)
             list.adapter = subtaskAdapter
-        })
+        }
         registerForContextMenu(list)
 
         val buttonAddSubTask = findViewById<Button>(R.id.id_button_add_sub_task)

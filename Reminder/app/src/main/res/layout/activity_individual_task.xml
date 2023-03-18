@@ -492,6 +492,7 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:buttonTint="@color/black"
+        android:onClick="setStatus"
         android:scaleX="1.5"
         android:scaleY="1.5"
         app:layout_constraintBottom_toBottomOf="@+id/view"

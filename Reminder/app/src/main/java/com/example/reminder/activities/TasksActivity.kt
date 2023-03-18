@@ -1,21 +1,19 @@
 package com.example.reminder.activities
 
 import android.content.Intent
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ContextMenu
-import android.view.MenuItem
-import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.ListView
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.example.reminder.R
 import com.example.reminder.adapters.TaskAdapter
 import com.example.reminder.database.AppDataBase
 import com.example.reminder.entities.Task
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import java.time.ZoneId
+import java.time.ZonedDateTime
+import java.time.format.DateTimeFormatter
 
 class TasksActivity : AppCompatActivity() {
 
@@ -26,6 +24,11 @@ class TasksActivity : AppCompatActivity() {
 
         // Receive intent from LoginActivity
         val id_user = intent.getIntExtra("id_usr", 0)
+
+        //set date
+        val timestamp = ZonedDateTime.now(ZoneId.of("America/Guayaquil"))
+            .format(DateTimeFormatter.ofPattern("dd-MM-yyy"))
+        findViewById<TextView>(R.id.date_filter).text = timestamp
 
         // Task list
         val database = AppDataBase.getDatabase(this)
@@ -42,11 +45,39 @@ class TasksActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val buttonPending = findViewById<Button>(R.id.id_button_pending)
+        buttonPending.setOnClickListener {
+            database.task().getTaskbyStatus(id_user, "Pending").observe(this, Observer {
+                listTask = it
+                val taskAdapter = TaskAdapter(this, listTask)
+                list.adapter = taskAdapter
+            })
+        }
+
+        val buttonCompleted = findViewById<Button>(R.id.id_button_completed)
+        buttonCompleted.setOnClickListener {
+            database.task().getTaskbyStatus(id_user, "Completed").observe(this, Observer {
+                listTask = it
+                val taskAdapter = TaskAdapter(this, listTask)
+                list.adapter = taskAdapter
+            })
+        }
+
+        val buttonOverdue = findViewById<Button>(R.id.id_button_overdue)
+        buttonOverdue.setOnClickListener {
+            database.task().getTaskbyStatus(id_user, "Overdue").observe(this, Observer {
+                listTask = it
+                val taskAdapter = TaskAdapter(this, listTask)
+                list.adapter = taskAdapter
+            })
+        }
+
         val buttonAddTask = findViewById<Button>(R.id.id_button_add_task)
         buttonAddTask.setOnClickListener {
             val intent = Intent(this, IndividualTaskActivity::class.java)
             intent.putExtra("id_usr", id_user)
             startActivity(intent)
         }
+
     }
 }

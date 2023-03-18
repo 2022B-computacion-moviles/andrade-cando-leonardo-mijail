@@ -18,6 +18,8 @@ class IndividualTaskActivity : AppCompatActivity() {
     var lvl_priority = 0
     var tag_task = ""
     var id_task = 0
+    var status_task = "Pending"
+
     private lateinit var task: Task
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +29,8 @@ class IndividualTaskActivity : AppCompatActivity() {
         var id_user = intent.getIntExtra("id_usr",0)
         //initialization id task for update and delete
         var id_task_update: Int? = null
+
+
 
         //database
         val database = AppDataBase.getDatabase(this)
@@ -78,7 +82,7 @@ class IndividualTaskActivity : AppCompatActivity() {
             val name_task = findViewById<TextView>(R.id.name_task).text.toString()
             val description_task = findViewById<TextView>(R.id.description_task).text.toString()
             val date_task = findViewById<TextView>(R.id.date_task).text.toString()
-            val status_task = "Pending"
+
 
             val task = Task(id_user,name_task,description_task,date_task, lvl_priority,tag_task,status_task)
 
@@ -126,5 +130,11 @@ class IndividualTaskActivity : AppCompatActivity() {
             tag_task = "Extra"
         }
         return tag_task
+    }
+    fun setStatus(v: View?): String {
+        if (findViewById<CheckBox>(R.id.checkBox_task).isChecked){
+            status_task = "Completed"
+        }
+        return status_task
     }
 }
