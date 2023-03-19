@@ -71,6 +71,12 @@ class IndividualTaskActivity : AppCompatActivity() {
                         findViewById<RadioButton>(R.id.radioButton_l4).isChecked = true
                     }
                 }
+                when (task.status_task) {
+                    "Completed" -> {
+                        findViewById<CheckBox>(R.id.checkBox_task).isChecked = true
+                    }
+
+                }
                 id_user = task.id_User
             })
         }
