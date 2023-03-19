@@ -29,7 +29,7 @@ class PlanetasAdapter (
         layout.findViewById<TextView>(R.id.distancia_planeta).text = planeta.distancia_planeta.toString()
         layout.findViewById<TextView>(R.id.fecha_planeta).text = planeta.fecha_planeta
         layout.findViewById<TextView>(R.id.tamanio_planeta).text = planeta.tamanio_planeta.toString()
-        //layout.findViewById<ImageView>(R.id.img_planeta).setImageResource(planeta.imagen)
+        layout.findViewById<ImageView>(R.id.img_planeta).setImageResource(R.drawable.ic_launcher_background)
 
         return layout
     }

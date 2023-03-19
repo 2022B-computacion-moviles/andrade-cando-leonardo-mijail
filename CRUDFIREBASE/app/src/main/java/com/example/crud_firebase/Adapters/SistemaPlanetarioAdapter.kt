@@ -23,6 +23,7 @@ class SistemaPlanetarioAdapter(
         layout.findViewById<TextView>(R.id.galaxia_sistema_planetario).text = sistemaPlanetario.galaxia_sistema_planetario
         layout.findViewById<TextView>(R.id.formacion_sistema_planetario).text = sistemaPlanetario.formacion_sistema_planetario
         layout.findViewById<TextView>(R.id.tipo_sistema_planetario).text = sistemaPlanetario.tipo_sistema_planetario
+        layout.findViewById<ImageView>(R.id.img_sistema_planetario).setImageResource(R.drawable.ic_launcher_background)
         return layout
     }
 }

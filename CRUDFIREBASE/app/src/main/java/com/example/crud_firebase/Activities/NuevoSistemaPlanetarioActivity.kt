@@ -1,5 +1,6 @@
 package com.example.crud_firebase.Activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -16,25 +17,23 @@ class NuevoSistemaPlanetarioActivity : AppCompatActivity() {
         var id_sistema_planetario: String? = null
 
         if(intent.hasExtra("sistema_planetario")){
-            val sistema_planetario = intent.getIntExtra("sistema_planetario",0)
+
+            val sistema_planetario = intent.getStringExtra("sistema_planetario")
             val db: FirebaseFirestore = FirebaseFirestore.getInstance()
             db.collection("Sistema Planetario")
                 .document(sistema_planetario.toString())
                 .get()
                 .addOnSuccessListener {resultado ->
-
-
-                    findViewById<TextView>(R.id.lv_nombre_sistema_planetario).text = resultado["nombre"].toString()
-                    findViewById<TextView>(R.id.lv_formacion_sistema_planetario).text = resultado["formacion"].toString()
-                    findViewById<TextView>(R.id.lv_galaxia_sistema_planetario).text =resultado["galaxia"].toString()
-                    findViewById<TextView>(R.id.lv_tipo_sistema_planetario).text = resultado["tipo"].toString()
+                    findViewById<TextView>(R.id.t_nombre_sistema_planetario).text = resultado["nombre"].toString()
+                    findViewById<TextView>(R.id.t_formacion_sistema_planetario).text = resultado["formacion"].toString()
+                    findViewById<TextView>(R.id.t_galaxia_sistema_planetario).text =resultado["galaxia"].toString()
+                    findViewById<TextView>(R.id.t_tipo_sistema_planetario).text = resultado["tipo"].toString()
                     id_sistema_planetario = sistema_planetario.toString()
 
                 }
                 .addOnFailureListener {
                     Toast.makeText(this,"Error al guardar",Toast.LENGTH_SHORT).show()
                 }
-
         }
 
 
@@ -60,10 +59,13 @@ class NuevoSistemaPlanetarioActivity : AppCompatActivity() {
                     .set(dato)
                     .addOnSuccessListener {
                         Toast.makeText(this,"Actualizado",Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this,SistemaPlanetarioActivity::class.java))
                     }
                     .addOnFailureListener {
                         Toast.makeText(this,"Error al Actualizar",Toast.LENGTH_SHORT).show()
+                        this@NuevoSistemaPlanetarioActivity.finish()
                     }
+
 
             }else{
                 //insert
@@ -72,9 +74,11 @@ class NuevoSistemaPlanetarioActivity : AppCompatActivity() {
                     .add(dato)
                     .addOnSuccessListener {
                         Toast.makeText(this,"Guardado",Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this,SistemaPlanetarioActivity::class.java))
                     }
                     .addOnFailureListener {
                         Toast.makeText(this,"Error al guardar",Toast.LENGTH_SHORT).show()
+                        this@NuevoSistemaPlanetarioActivity.finish()
                     }
             }
 

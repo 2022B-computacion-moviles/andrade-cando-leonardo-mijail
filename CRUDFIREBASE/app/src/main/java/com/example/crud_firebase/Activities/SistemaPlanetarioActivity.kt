@@ -18,6 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 class SistemaPlanetarioActivity : AppCompatActivity() {
     var id_sistema_planetario = 0
     var listaSistemaPlanetario = mutableListOf<SistemaPlanetario>()
+    lateinit var sistemaPlanetario : SistemaPlanetario
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sistema_planetario)
@@ -27,26 +28,28 @@ class SistemaPlanetarioActivity : AppCompatActivity() {
             .get()
             .addOnSuccessListener { resultado ->
                 for (documento in resultado){
-                    var sistemaPlanetario = SistemaPlanetario(documento["nombre"].toString(),documento["formacion"].toString(),
+                    sistemaPlanetario = SistemaPlanetario(documento["nombre"].toString(),documento["formacion"].toString(),
                     documento["galaxia"].toString(),documento["tipo"].toString(),documento.id)
                     listaSistemaPlanetario.add(sistemaPlanetario)
+
+
+                }
+                val lista = findViewById<ListView>(R.id.lista_sistema_planetario)
+                val adapter = SistemaPlanetarioAdapter(this,listaSistemaPlanetario)
+                lista.adapter = adapter
+                adapter.notifyDataSetChanged()
+
+                registerForContextMenu(lista)
+
+                lista.setOnItemClickListener { parent, view, position, id ->
+                    val intent = Intent(this, VerSistemaPlanetarioActivity::class.java)
+                    intent.putExtra("id", listaSistemaPlanetario[position].id_sistema_planetario)
+                    startActivity(intent)
                 }
             }
             .addOnFailureListener {
                 Toast.makeText(this,it.toString(), Toast.LENGTH_SHORT).show()
             }
-
-        val lista = findViewById<ListView>(R.id.lista_sistema_planetario)
-        val adapter = SistemaPlanetarioAdapter(this,listaSistemaPlanetario)
-        lista.adapter = adapter
-
-        registerForContextMenu(lista)
-
-        lista.setOnItemClickListener { parent, view, position, id ->
-            val intent = Intent(this, VerSistemaPlanetarioActivity::class.java)
-            intent.putExtra("id", listaSistemaPlanetario[position].id_sistema_planetario)
-            startActivity(intent)
-        }
 
         val agregarBoton = findViewById<FloatingActionButton>(R.id.floatingActionButton)
         agregarBoton.setOnClickListener{
@@ -79,13 +82,21 @@ class SistemaPlanetarioActivity : AppCompatActivity() {
                 return true
             }
             R.id.eliminar_sistema_planetario ->{
-                val intent = Intent(this,SistemaPlanetarioActivity::class.java )
-                intent.putExtra("sistema_planetario",listaSistemaPlanetario[id_sistema_planetario])
-                startActivity(intent)
+                val db: FirebaseFirestore = FirebaseFirestore.getInstance()
+                db.collection("Sistema Planetario")
+                    .document(listaSistemaPlanetario[id_sistema_planetario].id_sistema_planetario)
+                    .delete()
+                    .addOnSuccessListener {
+                        Toast.makeText(this,"Borrado Exitoso", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this,SistemaPlanetarioActivity::class.java))
+                    }
+                    .addOnFailureListener {
+                        Toast.makeText(this,"No se pudo borrar", Toast.LENGTH_SHORT).show()
+                    }
                 return true
             }
             R.id.ver_planetas ->{
-                val intent = Intent(this,VerPlanetaActivity::class.java )
+                val intent = Intent(this, PlanetaActivity::class.java )
                 intent.putExtra("id_sistema_planetario",listaSistemaPlanetario[id_sistema_planetario].id_sistema_planetario)
                 startActivity(intent)
                 return true

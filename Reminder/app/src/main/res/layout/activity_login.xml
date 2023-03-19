@@ -21,14 +21,13 @@
         android:id="@+id/imageReminder"
         android:layout_width="241dp"
         android:layout_height="185dp"
-        android:layout_marginBottom="368dp"
         android:src="@drawable/logo_reminder"
         app:layout_constraintBottom_toTopOf="@+id/viewBackground_bottom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewBackground_top"
-        app:layout_constraintVertical_bias="0.206">
+        app:layout_constraintVertical_bias="0.023">
 
     </ImageView>
 

@@ -90,10 +90,11 @@
         app:layout_constraintStart_toStartOf="@+id/viewBackground_top"
         app:layout_constraintTop_toTopOf="@+id/viewBackground_top">
     </Button>
+
     <ListView
         android:id="@+id/task_list_view"
-        android:layout_width="370dp"
-        android:layout_height="392dp"
+        android:layout_width="373dp"
+        android:layout_height="350dp"
         android:layout_marginTop="40dp"
         android:padding="7dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -137,6 +138,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task_list_view"></View>
 
+
     <Button
         android:id="@+id/id_button_add_task"
         style="@android:style/Widget.Button"
@@ -153,9 +155,7 @@
         app:layout_constraintEnd_toEndOf="@+id/backgroundButton_login"
         app:layout_constraintStart_toStartOf="@+id/backgroundButton_login"
         app:layout_constraintTop_toTopOf="@+id/backgroundButton_login"
-        app:layout_constraintVertical_bias="1.0">
-    </Button>
-
+        app:layout_constraintVertical_bias="0.0"></Button>
 
     <View
         android:id="@+id/viewBackground_bottom"

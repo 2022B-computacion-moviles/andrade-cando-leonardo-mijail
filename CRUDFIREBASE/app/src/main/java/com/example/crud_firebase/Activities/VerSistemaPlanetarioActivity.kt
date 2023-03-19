@@ -17,7 +17,7 @@ class VerSistemaPlanetarioActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ver_sistema_planetario)
 
-        val id_sistemaPlanetario = intent.getIntExtra("id", 0)
+        val id_sistemaPlanetario = intent.getStringExtra("id")
 
         val db: FirebaseFirestore = FirebaseFirestore.getInstance()
         db.collection("Sistema Planetario")

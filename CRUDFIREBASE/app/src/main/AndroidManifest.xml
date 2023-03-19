@@ -12,22 +12,22 @@
         android:theme="@style/Theme.CRUDFIREBASE"
         tools:targetApi="31">
         <activity
-            android:name=".VerPlanetaActivity"
+            android:name=".Activities.VerPlanetaActivity"
             android:exported="false" />
         <activity
-            android:name=".NuevoSistemaPlanetarioActivity"
+            android:name=".Activities.NuevoSistemaPlanetarioActivity"
             android:exported="false" />
         <activity
-            android:name=".NuevoPlanetaActivity"
+            android:name=".Activities.NuevoPlanetaActivity"
             android:exported="false" />
         <activity
-            android:name=".PlanetaActivity"
+            android:name=".Activities.PlanetaActivity"
             android:exported="false" />
         <activity
-            android:name=".VerSistemaPlanetarioActivity"
+            android:name=".Activities.VerSistemaPlanetarioActivity"
             android:exported="false" />
         <activity
-            android:name=".SistemaPlanetarioActivity"
+            android:name=".Activities.SistemaPlanetarioActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
